@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219003833) do
+ActiveRecord::Schema.define(version: 20131219094603) do
 
   create_table "pages", force: true do |t|
     t.string   "name"
@@ -19,8 +19,21 @@ ActiveRecord::Schema.define(version: 20131219003833) do
     t.string   "ancestry"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "icon"
+    t.boolean  "mappable"
+    t.boolean  "searchable"
+    t.string   "keywords"
+    t.boolean  "isrootview"
   end
 
   add_index "pages", ["ancestry"], name: "index_pages_on_ancestry"
+
+  create_table "users", force: true do |t|
+    t.string   "ipaddress"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -1,0 +1,8 @@
+<% Page.roots.each do |page| %>
+<% if page.isrootview? %>
+<% render :template =>page%>
+	<% else %>
+<!--li> <%= link_to (image_tag "icons/#{page.icon.split('/').last}", :size =>"40x40"), page %></li-->
+	<li> <%= link_to page.name, page, class: ("active" if @page.root==page) %></li>
+	<% end %>
+	<% end%>

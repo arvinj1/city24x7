@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   # GET /pages.json
   def index
     @pages = Page.all
+    @ip = remoteIP()
   end
 
   # GET /pages/1
@@ -15,10 +16,21 @@ class PagesController < ApplicationController
   # GET /pages/new
   def new
     @page = Page.new
+    @images=Dir.glob("app/assets/images/icons/*.png")
   end
 
   # GET /pages/1/edit
   def edit
+    @images=Dir.glob("app/assets/images/icons/*.png")
+  end
+  
+  def main
+    Page.roots.each do |page| 
+      if page.isrootview?
+        @page=page 
+        end
+      end
+      render :show
   end
 
   # POST /pages
@@ -65,10 +77,11 @@ class PagesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_page
       @page = Page.find(params[:id])
+      @rip=remoteIP()
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:name, :content, :parent_id)
+      params.require(:page).permit(:name, :content, :parent_id,:icon,:mappable,:searchable,:keywords,:isrootview)
     end
 end

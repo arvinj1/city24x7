@@ -1,3 +1,6 @@
+<b> Request from <%=@rip %> </b>
+<b> <%=@page.name %> 
+	<%=@page.parent.name if @page.parent.nil? == false %> </b>
 <%= form_for(@page) do |f| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
@@ -17,12 +20,33 @@
   </div>
   <div class="field">
     <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, size: "60x24"  %>
   </div>
   <div class="field">
     <%= f.label :parent_id %><br>
     <%= f.collection_select :parent_id, Page.order(:name) ,:id ,:name ,:include_blank => true %>
   </div>
+  <div class="field">
+    <%= f.label :icon %><br>
+    <%= f.select :icon, @images %>
+	</div>
+    <div class="field">
+      <%= f.label :mappable %><br>
+      <%= f.check_box :mappable %>
+  	</div>
+    <div class="field">
+      <%= f.label :searchable %><br>
+      <%= f.check_box :searchable %>
+  	</div>
+    <div class="field">
+      <%= f.label :keywords %><br>
+      <%= f.text_field :keywords%>
+  	</div>
+    <div class="field">
+      <%= f.label :isrootview %><br>
+      <%= f.check_box :isrootview %>
+  	</div>
+	
   <div class="actions">
     <%= f.submit %>
   </div>

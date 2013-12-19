@@ -6,6 +6,9 @@
       <th>Name</th>
       <th>Content</th>
       <th>Ancestry</th>
+	  <th>Mappable</th>
+	  <th>Searchable</th>
+	  <th>Keywords</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,6 +21,10 @@
         <td><%= page.name %></td>
         <td><%= page.content %></td>
         <td><%= page.ancestry %></td>
+		<td><%= page.mappable%></td>
+		<td><%= page.searchable%></td>
+		<td><%= page.keywords%></td>
+		
         <td><%= link_to 'Show', page %></td>
         <td><%= link_to 'Edit', edit_page_path(page) %></td>
         <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
