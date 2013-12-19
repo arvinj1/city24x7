@@ -12,6 +12,7 @@ class PagesController < ApplicationController
   # GET /pages/1.json
   def show
   end
+  
 
   # GET /pages/new
   def new
@@ -25,12 +26,16 @@ class PagesController < ApplicationController
   end
   
   def main
-    Page.roots.each do |page| 
-      if page.isrootview?
-        @page=page 
+    if Page.roots.nil?
+      render :index
+    else
+      Page.roots.each do |page| 
+        if page.isrootview?
+          @page=page 
         end
       end
       render :show
+    end
   end
 
   # POST /pages

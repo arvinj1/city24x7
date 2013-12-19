@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20131219094603) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "pages", force: true do |t|
     t.string   "name"
     t.text     "content"
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 20131219094603) do
     t.boolean  "isrootview"
   end
 
-  add_index "pages", ["ancestry"], name: "index_pages_on_ancestry"
+  add_index "pages", ["ancestry"], name: "index_pages_on_ancestry", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "ipaddress"
