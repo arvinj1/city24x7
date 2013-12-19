@@ -2,7 +2,7 @@ class UserController < ApplicationController
   def create
     ip=remoteIP()
     params[:user][:ip]=ip;
-    @user=User.create(params)!
+    @user=User.create(params)
 
   end
   
