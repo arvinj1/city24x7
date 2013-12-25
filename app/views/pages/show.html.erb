@@ -106,9 +106,9 @@ body {
 	
 <% else %>
 <% if @page != nil%>
-	<li> <%= link_to page.name, page, class: ("active" if @page.root==page) %></li>
+	<li> <%= link_to  (image_tag "icons/#{page.icon.split('/').last}", :size =>"120x40"), page, class: ("active" if @page.root==page) %></li>
 	<% else %>
-	<li> <%= link_to page.name, page %></li>
+	<li> <%= link_to (image_tag "icons/#{page.icon.split('/').last}", :size =>"120x40"), page %></li>
 	<%end%>
 	<% end %>
 	<% end%>
@@ -143,7 +143,7 @@ body {
 	<p>
 	Oye you have an empty database! Contact your admin or </p>
 	<p> 
-	<%= link_to (image_tag 'build-icon.png', :size =>"160x160"), pages_path %> <b>Build It Yourself! </b> 
+	<%= link_to (image_tag 'build-icon.png', :size =>"220x2200"), pages_path %> <b>Build It Yourself! </b> 
 	</p>
 </div>
 	<%end%>
@@ -158,7 +158,7 @@ body {
 <% if pchild.icon.nil? %>
 <div class="item"> <%= link_to pchild.name, pchild, class: ("active" if pchild.root==pchild) %></div>
 <%else%>
-<div class="item"><%= link_to (image_tag "icons/#{pchild.icon.split('/').last}", :size =>"160x160") ,pchild %></div>
+<div class="item"><%= link_to (image_tag "icons/#{pchild.icon.split('/').last}", :size =>"220x220") ,pchild %></div>
 <%end%>
 <% end %>
 </div>
@@ -178,7 +178,11 @@ body {
 		<%keywords=@page.keywords %>
 		<%typedkeywords=keywords.split(",")%>
 		<%keyword=typedkeywords*"|"%>
-		<%type=@page.parent.keywords.split(",")*"|"%>
+		<%parentType=@page.parent.searchType==nil ? "" : @page.parent.searchType%>
+		<%parentKeyword=@page.parent.keywords==nil ? "" : @page.parent.keywords%>
+		<%mysearchType=@page.searchType==nil ? "" : @page.searchType%>
+		<%mytype=mysearchType+","+parentType+","+parentKeyword%>
+		<%type=mytype.split(",")*"|"%>
 		
 	<%@placesurl="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@coordinates.first},#{@coordinates.second}&radius=8000&type=#{type}&keyword=#{keyword}&sensor=false&key=AIzaSyCiIVlMotGTHUdGu-3bNbcbgfOXkkOSYoY"%>
 	
