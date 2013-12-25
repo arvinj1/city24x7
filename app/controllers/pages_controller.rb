@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   def index
     @pages = Page.all
     @ip = remoteIP()
+    
   end
 
   # GET /pages/1
@@ -18,11 +19,15 @@ class PagesController < ApplicationController
   def new
     @page = Page.new
     @images=Dir.glob("app/assets/images/icons/*.png")
+    @ip = remoteIP()
+   
   end
 
   # GET /pages/1/edit
   def edit
     @images=Dir.glob("app/assets/images/icons/*.png")
+    @ip = remoteIP()
+    
   end
   
   def main

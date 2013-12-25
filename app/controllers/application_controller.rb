@@ -10,4 +10,7 @@ class ApplicationController < ActionController::Base
         request.remote_ip
       end
     end
+    def placesClient
+      @client = GooglePlaces::Client.new(API_KEY)
+    end
 end

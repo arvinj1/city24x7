@@ -16,6 +16,32 @@
        -moz-border-radius: 5px;
             border-radius: 5px;
 }
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body { 
+  
+  margin: 0;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.masonry {
+  background: #ff0000;
+}
+
+.masonry .item {
+  width:  50%;
+  height: 100px;
+  float: left;
+  background: #eeeeee;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+}
 </style>
 <script> 
 var $container = $('#container');
@@ -31,49 +57,100 @@ $container.imagesLoaded(function(){
 	  }
   });
 });
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body { 
+  
+  margin: 0;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.masonry {
+  background: #ff0000;
+}
+
+.masonry .leftItem {
+  width:  20%;
+  height: 20px;
+  float: left;
+  background: #eeeeee;
+  border: 1px solid #333;
+  margin-bottom: 2px;
+}
+.masonry .rightItem{
+  width:  80%;
+  height: 200px;
+  float: right;
+  background: #aaaaa;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+}
 </script>
 
-<% content_for :title, Page.all.count==0 ? "Nothing yet" : @page.name %>
+<% content_for :title, Page.all.count==0 ? "Nothing yet" : "C247" %>
+<% if Page.all.count > 0%>
 <ul id="menu">
 <% Page.roots.each do |page| %>
 <% if page.icon.nil? %>
+<% if @page != nil%>
 <li> <%= link_to page.name, page, class: ("active" if @page.root==page) %></li>
-	<% else %>
-<!--li> <%= link_to (image_tag "icons/#{page.icon.split('/').last}", :size =>"40x40"), page %></li-->
+<% else %>
+<li> <%= link_to page.name, page %></li>
+<% end%>
+	
+<% else %>
+<% if @page != nil%>
 	<li> <%= link_to page.name, page, class: ("active" if @page.root==page) %></li>
+	<% else %>
+	<li> <%= link_to page.name, page %></li>
+	<%end%>
 	<% end %>
 	<% end%>
 </ul>
 <!--div id="submenu">
 <% if Page.all.count > 0 %>
+<% if @page != nil %>
 <%= render 'submenu_pages', pages: @page.root.descendants.arrange %>
 <% end %>
+<% end %>
 </div-->
+<% end %>
 
 <div id="breadcrumbs">
 	<% if Page.all.count > 0 %>
+	<% if @page != nil%>
 		<% @page.ancestors.each do |page| %>
 			<b><%= link_to page.name , page %></b> &gt;
 		<% end %>
+		<%end%>
 	<% end %>
 </div>
 <p id="notice"><%= notice %></p>
 
 <h1>  
 	<% if Page.all.count != 0 %>
-		<%= @page.name %> 
+	<% if @page != nil%>
+		<%= @page.name %>
+		<% end%> 
 	<%else%>
 	<div id="container">
 	<p>
 	Oye you have an empty database! Contact your admin or </p>
 	<p> 
-	<%= link_to (image_tag 'build-icon.png', :size =>"40x40"), pages_path %> <b>Build It Yourself! </b> 
+	<%= link_to (image_tag 'build-icon.png', :size =>"160x160"), pages_path %> <b>Build It Yourself! </b> 
 	</p>
 </div>
 	<%end%>
 </h1>
 		
 <% if Page.all.count != 0%>
+<% if @page != nil%>
 <% if @page.children.count > 0 %>
 <b>There are children found <%= @page.children.count%> </b>
 <div id="container">
@@ -87,11 +164,55 @@ $container.imagesLoaded(function(){
 </div>
 <% elsif @page.mappable?%>
 <b>Will be mapping things here with base location = <%=@rip%></b>
+<%  @coordinates ||= Geocoder.coordinates(@rip) %>
+<b> Latitude:<%= @coordinates.first %> Longitude:<%=@coordinates.second %> </b>
 <% elsif @page.searchable?%>
 <b>Will be searching things here withbase location = <%=@rip%> <%= @page.keywords %></b>
+<%  @coordinates ||= Geocoder.coordinates(@rip) %>
+<b> Latitude:<%= @coordinates.first %> Longitude:<%=@coordinates.second %> </b>
+<% @address=Geocoder.address(@coordinates)%>
+<b>The address should be <%=@address%> </b>
+
+	<p>Using Google Places Api Gem </p>
+	<div >
+		<%keywords=@page.keywords %>
+		<%typedkeywords=keywords.split(",")%>
+		<%keyword=typedkeywords*"|"%>
+		<%type=@page.parent.keywords.split(",")*"|"%>
+		
+	<%@placesurl="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@coordinates.first},#{@coordinates.second}&radius=8000&type=#{type}&keyword=#{keyword}&sensor=false&key=AIzaSyCiIVlMotGTHUdGu-3bNbcbgfOXkkOSYoY"%>
+	
+	<% resp = Net::HTTP.get_response(URI.parse(URI.encode(@placesurl)))%>
+    <%data = resp.body%>
+	<%results=JSON.parse(data)%>
+	<% reds= results["results"]%>
+	
+	<%@mapurl="http://maps.google.com/maps/api/staticmap?size=640x480&zoom=11&sensor=false&markers=color:green%7clabel:H%7c#{@coordinates.first}%2C#{@coordinates.second}"%>
+	<table><tr><td col=80%>
+		<%x=65%>
+	<%reds.each do |red|%>
+	
+	<%@mapurl+="&markers=color:blue%7clabel:#{x.chr}%7c#{red["geometry"]["location"]["lat"]}%2C#{red["geometry"]["location"]["lng"]}"%>
+	<%x=x+1%>
+	<%end%>
+	<%= image_tag @mapurl %></td>
+	<td col="20%">	
+	<%x=64%>
+	<%reds.each do |red|%>
+	<%x=x+1%>
+	<li><b><%=x.chr%></b> <%= red["name"]%><br><%=red["vicinity"]%>
+		<%price=red["price_level"].to_i%>
+		<%rating=red["rating"].to_i%>
+		|<%=price%>$|<%=rating%>stars|
+	</li>
+	<%end%>
+	
+</td></tr></table>
+
 <% else %>
 <b>Not mappable, not searchable just print the content </b>
 <%= simple_format @page.content %>
+<% end %>
 <% end %>
 <% end %>
 

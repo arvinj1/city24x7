@@ -29,6 +29,7 @@ GEM
       activerecord (>= 3.0.0)
     arel (4.0.1)
     atomic (1.1.14)
+    awesome_print (1.2.0)
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -40,7 +41,12 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     geocoder (1.1.8)
+    google_places (0.20.0)
+      httparty
     hike (1.2.3)
+    httparty (0.12.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -56,8 +62,10 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.2)
+    multi_xml (0.5.5)
     pg (0.17.0)
     polyglot (0.3.3)
+    pp-colour (0.1.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -123,11 +131,14 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry
+  awesome_print
   coffee-rails (~> 4.0.0)
   geocoder
+  google_places
   jbuilder (~> 1.2)
   jquery-rails
   pg
+  pp-colour (~> 0.1.0)
   rails (= 4.0.0)
   rails_12factor
   sass-rails (~> 4.0.0)
