@@ -1,0 +1,23 @@
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>IP</th>
+      <th>Latitude</th>
+      <th>Longiture</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% users.each do |user| %>
+      <tr>
+        <td><%= user.ipaddress %></td>
+        <td><%= user.latitude %></td>
+        <td><%= user.longitude %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
