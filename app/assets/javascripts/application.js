@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require masonry.pkgd.min
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
