@@ -39,7 +39,9 @@ group :production do
 end
 gem 'awesome_print'
 gem "pp-colour", "~> 0.1.0"
-gem "zurb-foundation"
+gem "foundation-rails"
+
+gem "debugger"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

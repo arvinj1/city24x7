@@ -19,13 +19,97 @@
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
+	<style>
+
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript">
+	function callWeather() {
+		//var wsUrl="http://api.openweathermap.org/data/2.5/weather?lat=-44&lon=73.9&units=metric";
+		var wsUrl="http://api.openweathermap.org/data/2.5/weather?lat=";
+		
+		<% @coordinates ||= Geocoder.coordinates(remoteIP()) %>
+		var lat=<%=@coordinates.first%>;
+		var lon=<%=@coordinates.second%>;
+		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric";
+		
+		console.log("Lat"+lat+"long:"+lon);
+		window['weatherCallback'] = function(data) {
+				
+		        var tempinfo = data.main.temp;
+				console.log("Temp = data");
+				console.log(data);
+				console.log(data.main.temp);
+				console.log(data.weather[0].icon);
+				var condinfo = data.weather[0].icon;
+				
+				tempinfo=tempinfo*1.8+32;
+				var boldtemp=""+tempinfo+"&deg;F";
+		        $('#weatherTemp').append(boldtemp);
+				var iconstr="<img src='http://openweathermap.org/img/w/"+condinfo+".png' width='64' height='64' />";
+				$('#weatherIcon').append(iconstr);
+				
+		    };
+			
+			$.ajax({
+			        url: wsUrl,
+			        dataType: 'jsonp',
+			        cache: true,
+			        jsonpCallback: 'weatherCallback'
+			    });
+		}
+		
+
+	$(document).ready (callWeather);	
+	
+	</script>
+	
   </head>
 
   <body>
-	 
+
+	  <nav class="top-bar" data-topbar>
+	    <ul class="title-area">
+	      <li class="name">
+			<%= (image_tag "city_24x7_logo.png", size:"192x128") %>
+	      </li>
+	      
+	    </ul>
+
+	    <section class="top-bar-section">
+	      <!-- Right Nav Section -->
+		  
+	      <ul class="right">
+			  <li><div class="clock">
+				  <div id="Date"></div>
+				  <ul>	
+			    <li id="sec"></li>
+			    <li id="hours"></li>
+			    <li id="min"></li>
+			  </ul></li>
+		  </div>
+			 <li><span  id="weatherTemp"></span></li> 
+			 <li class="divider"></li>
+	        <li><span id="weatherIcon"></span></li>
+			
+			
+	      </ul>
+
+	      
+	    </section>
+	  </nav>
     <%= yield %>
 
     
     <%= javascript_include_tag "application" %>
+	
+	
+	<footer class="row">
+	  <section class="small-10 columns">
+	  <%= (image_tag "city_24x7_logo.png", size:"192x128") %> <span class="[success alert secondary] [round radius] label">Touch To Grow With NYC</span>
+	    All rights reserved.
+	  </section>
+	</footer>
+	
   </body>
 </html>

@@ -26,4 +26,8 @@ module PagesHelper
      end
    end
   
+   def current_top_page?(page)
+     logger.debug "The current_top_page check #{page.id} : #{params[:id]}" 
+     @page.id==page.id
+   end
 end

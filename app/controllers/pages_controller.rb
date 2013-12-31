@@ -6,6 +6,8 @@ class PagesController < ApplicationController
   def index
     @pages = Page.all
     @ip = remoteIP()
+    @rip=remoteIP()
+    @coordinates ||= Geocoder.coordinates(@rip)
     
   end
 
@@ -19,14 +21,16 @@ class PagesController < ApplicationController
   def new
     @page = Page.new
     @images=Dir.glob("app/assets/images/icons/*.png")
-    @ip = remoteIP()
+    @rip=remoteIP()
+    @coordinates ||= Geocoder.coordinates(@rip)
    
   end
 
   # GET /pages/1/edit
   def edit
     @images=Dir.glob("app/assets/images/icons/*.png")
-    @ip = remoteIP()
+    @rip=remoteIP()
+    @coordinates ||= Geocoder.coordinates(@rip)
     
   end
   
@@ -88,10 +92,11 @@ class PagesController < ApplicationController
     def set_page
       @page = Page.find(params[:id])
       @rip=remoteIP()
+      @coordinates ||= Geocoder.coordinates(@rip)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:name, :content, :parent_id,:icon,:mappable,:searchable,:keywords,:isrootview,:searchType)
+      params.require(:page).permit(:name, :content, :parent_id,:icon,:mappable,:searchable,:keywords,:isrootview,:searchType,:sec_icon)
     end
 end

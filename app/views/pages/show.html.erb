@@ -1,85 +1,29 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="/app/assetsjavascripts/masonry.pkgd.min.js"></script>
-<style>
-.item {
-  width: 220px;
-  margin: 10px;
-  float: center;
-  border: 1;
-  margin: 5px;
-    padding: 5px;
-    background: #D8D5D2;
-    font-size: 11px;
-    line-height: 1.4em;
-    float: left;
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body { 
-  
-  margin: 0;
-  font-family: sans-serif;
-  padding: 20px;
-}
-
-.masonry {
-  background: #ff0000;
-}
-
-.masonry .item {
-  width:  50%;
-  height: 100px;
-  float: left;
-  background: #eeeeee;
-  border: 1px solid #333;
-  margin-bottom: 20px;
-}
-</style>
-<script> 
-var $container = $('#container');
-$container.imagesLoaded(function(){
-  $container.masonry({
-    itemSelector : '.item',
-    columnWidth : 240,
-	isAnimated: true,
-	animationOptions: {
-	    duration: 750,
-	    easing: 'linear',
-	    queue: false
-	  }
-  });
-});
-</script>
-
 
 <% content_for :title, Page.all.count==0 ? "Nothing yet" : "C247" %>
 <% if Page.all.count > 0%>
-<ul id="menu">
-<% Page.roots.each do |page| %>
-<% if page.icon.nil? %>
-<% if @page != nil%>
-<li> <%= link_to page.name, page, class: ("active" if @page.root==page) %></li>
-<% else %>
-<li> <%= link_to page.name, page %></li>
-<% end%>
+	<dl class="tabs" data-tab>
+		<% Page.roots.each do |page| %>
+		<% if page.icon.nil? %>
+			<% if @page != nil%>
+				<dd> <%= link_to page.name, page, class: ("active" if @page.root==page) %></dd>
+			<% else %>
+				<dd> <%= link_to page.name, page %></dd>
+			<% end%>
 	
-<% else %>
-<% if @page != nil%>
-	<li> <%= link_to  (image_tag "icons/#{page.icon.split('/').last}"), page, class: ("active" if @page.root==page) %></li>
-	<% else %>
-	<li> <%= link_to (image_tag "icons/#{page.icon.split('/').last}"), page %></li>
-	<%end%>
-	<% end %>
+		<% else %>
+			<% if current_top_page?(page)%>
+				<% filename="icons/#{page.icon.split('/').last}"%>
+			<% else %>
+				<% filename="icons/#{page.sec_icon.split('/').last}"%>
+			<%end%>
+			<% if @page != nil%>
+				<dd> <%= link_to  (image_tag filename), page, class: ("active" if current_top_page?(page))  %></dd>
+			<% else %>
+				<dd>  <%= link_to (image_tag filename), page %></dd>
+			<%end%>
+		<% end %>
 	<% end%>
-</ul>
+</dl>
 <!--div id="submenu">
 <% if Page.all.count > 0 %>
 <% if @page != nil %>
@@ -123,16 +67,17 @@ $container.imagesLoaded(function(){
 <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
 <% @page.children.each do |pchild|%>
 <% if pchild.icon.nil? %>
-<li> <%= link_to pchild.name, pchild, class: ("active" if pchild.root==pchild) %></li>
+<li class="panel"> <%= link_to pchild.name, pchild, class: ("active" if pchild.root==pchild) %></li>
 <%else%>
-<li><%= link_to (image_tag "icons/#{pchild.icon.split('/').last}") ,pchild %></li>
+<li class="panel"><%= link_to (image_tag "icons/#{pchild.icon.split('/').last}") ,pchild %></li>
 <%end%>
 <% end %>
-</div>
+</ul>
 <% elsif @page.mappable?%>
 <b>Will be mapping things here with base location = <%=@rip%></b>
 <%  @coordinates ||= Geocoder.coordinates(@rip) %>
 <b> Latitude:<%= @coordinates.first %> Longitude:<%=@coordinates.second %> </b>
+
 <% elsif @page.searchable?%>
 <b>Will be searching things here withbase location = <%=@rip%> <%= @page.keywords %></b>
 <%  @coordinates ||= Geocoder.coordinates(@rip) %>
@@ -160,7 +105,7 @@ $container.imagesLoaded(function(){
 	
 	<%@mapurl="http://maps.google.com/maps/api/staticmap?size=640x480&zoom=11&sensor=false&markers=color:green%7clabel:H%7c#{@coordinates.first}%2C#{@coordinates.second}"%>
 	<table><tr><td col=80%>
-		<%x=65%>
+	<%x=65%>
 	<%reds.each do |red|%>
 	
 	<%@mapurl+="&markers=color:blue%7clabel:#{x.chr}%7c#{red["geometry"]["location"]["lat"]}%2C#{red["geometry"]["location"]["lng"]}"%>
@@ -181,7 +126,8 @@ $container.imagesLoaded(function(){
 		|<%=price%>$|<%=rating%>stars| </p3>
 	</a></li>
 	<%end%>
-</ul></div>
+</ul>
+</div>
 </td></tr></table>
 
 <% else %>

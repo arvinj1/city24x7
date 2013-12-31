@@ -9,6 +9,8 @@
 	  <th>Mappable</th>
 	  <th>Searchable</th>
 	  <th>Keywords</th>
+	  <th>Icon</th>
+	  <th>Secondary</th>
       <th></th>
       <th></th>
       <th></th>
@@ -24,6 +26,8 @@
 		<td><%= page.mappable%></td>
 		<td><%= page.searchable%></td>
 		<td><%= page.keywords%></td>
+		<td><%= (image_tag "icons/#{page.icon.split('/').last}", size: "52x52")%></td>
+		<td><%= (image_tag "icons/#{page.sec_icon.split('/').last}", size: "52x52") if page.sec_icon != nil%></td>
 		
         <td><%= link_to 'Show', page %></td>
         <td><%= link_to 'Edit', edit_page_path(page) %></td>
