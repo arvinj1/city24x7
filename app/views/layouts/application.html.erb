@@ -22,16 +22,20 @@
 	<style>
 
 	</style>
+	<link rel="stylesheet" type="text/css" href="css/jquery.jdigiclock.css" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.jdigiclock.js"></script>
 	<script type="text/javascript">
 	function callWeather() {
+		console.log("In call Weather!")
 		//var wsUrl="http://api.openweathermap.org/data/2.5/weather?lat=-44&lon=73.9&units=metric";
 		var wsUrl="http://api.openweathermap.org/data/2.5/weather?lat=";
+		var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
 		
 		<% @coordinates ||= Geocoder.coordinates(remoteIP()) %>
 		var lat=<%=@coordinates.first%>;
 		var lon=<%=@coordinates.second%>;
-		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric";
+		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric&_nocache=" + cacheBuster;
 		
 		console.log("Lat"+lat+"long:"+lon);
 		window['weatherCallback'] = function(data) {
@@ -43,12 +47,15 @@
 				console.log(data.weather[0].icon);
 				var condinfo = data.weather[0].icon;
 				
-				tempinfo=tempinfo*1.8+32;
-				var boldtemp=""+tempinfo+"&deg;F";
-		        $('#weatherTemp').append(boldtemp);
-				var iconstr="<img src='http://openweathermap.org/img/w/"+condinfo+".png' width='64' height='64' />";
-				$('#weatherIcon').append(iconstr);
+				tempinfo=Math.ceil(tempinfo*1.8+32);
 				
+				var boldtemp=""+tempinfo+"&deg;F";
+				
+		        $('#weatherTemp').replaceWith(boldtemp);
+				var iconstr="<img src='http://openweathermap.org/img/w/"+condinfo+".png' width='64' height='64' />";
+				$('#weatherIcon').replaceWith(iconstr);
+				
+				console.log($('#weatherTemp').html());
 		    };
 			
 			$.ajax({
@@ -59,8 +66,19 @@
 			    });
 		}
 		
+		var ready;
+		ready=function () {
+			callWeather();
+		};
 
-	$(document).ready (callWeather);	
+	$(document).ready (ready);
+	$(document).ready(function() {
+	        $('#digiclock').jdigiclock({
+	            // Configuration goes here
+	        });
+	    });
+		
+	//jQuery('document').on('page:load',ready);
 	
 	</script>
 	
@@ -80,14 +98,7 @@
 	      <!-- Right Nav Section -->
 		  
 	      <ul class="right">
-			  <li><div class="clock">
-				  <div id="Date"></div>
-				  <ul>	
-			    <li id="sec"></li>
-			    <li id="hours"></li>
-			    <li id="min"></li>
-			  </ul></li>
-		  </div>
+			<li><div id="digiclock"></div></li>
 			 <li><span  id="weatherTemp"></span></li> 
 			 <li class="divider"></li>
 	        <li><span id="weatherIcon"></span></li>

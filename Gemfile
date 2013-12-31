@@ -40,7 +40,7 @@ end
 gem 'awesome_print'
 gem "pp-colour", "~> 0.1.0"
 gem "foundation-rails"
-
+gem 'jquery-turbolinks'
 gem "debugger"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

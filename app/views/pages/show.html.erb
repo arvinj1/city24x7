@@ -59,34 +59,31 @@
 </div>
 	<%end%>
 </h1>
-		
+
+	
 <% if Page.all.count != 0%>
 <% if @page != nil%>
 <% if @page.children.count > 0 %>
-<b>There are children found <%= @page.children.count%> </b>
-<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-<% @page.children.each do |pchild|%>
-<% if pchild.icon.nil? %>
-<li class="panel"> <%= link_to pchild.name, pchild, class: ("active" if pchild.root==pchild) %></li>
-<%else%>
-<li class="panel"><%= link_to (image_tag "icons/#{pchild.icon.split('/').last}") ,pchild %></li>
-<%end%>
-<% end %>
-</ul>
+<div class="row" id="boardcontainer">
+	<div style="border: 0px solid black" class="small-12 large-12 large-centered columns text-center">
+		<ul id="board" class="large-block-grid-4 small-block-grid-4 large-centered"">
+			<% @page.children.each do |pchild|%>
+				<% if pchild.icon.nil? %>
+					<li> <%= link_to pchild.name, pchild, class: ("active" if pchild.root==pchild) %></li>
+				<%else%>
+					<li><%= link_to (image_tag "icons/#{pchild.icon.split('/').last}") ,pchild %></li>
+				<%end%>
+			<% end %>
+		</ul>
+	</div>
+</div>
+
 <% elsif @page.mappable?%>
-<b>Will be mapping things here with base location = <%=@rip%></b>
-<%  @coordinates ||= Geocoder.coordinates(@rip) %>
-<b> Latitude:<%= @coordinates.first %> Longitude:<%=@coordinates.second %> </b>
-
+	<%  @coordinates ||= Geocoder.coordinates(@rip) %>
+	<b> Latitude:<%= @coordinates.first %> Longitude:<%=@coordinates.second %> </b>
 <% elsif @page.searchable?%>
-<b>Will be searching things here withbase location = <%=@rip%> <%= @page.keywords %></b>
-<%  @coordinates ||= Geocoder.coordinates(@rip) %>
-<b> Latitude:<%= @coordinates.first %> Longitude:<%=@coordinates.second %> </b>
-<% @address=Geocoder.address(@coordinates)%>
-<b>The address should be <%=@address%> </b>
-
-	<p>Using Google Places Api Gem </p>
-	<div >
+	<%  @coordinates ||= Geocoder.coordinates(@rip) %>
+	<% @address=Geocoder.address(@coordinates)%>
 		<%keywords=@page.keywords %>
 		<%typedkeywords=keywords.split(",")%>
 		<%keyword=typedkeywords*"|"%>
@@ -104,34 +101,37 @@
 	<% reds= results["results"]%>
 	
 	<%@mapurl="http://maps.google.com/maps/api/staticmap?size=640x480&zoom=11&sensor=false&markers=color:green%7clabel:H%7c#{@coordinates.first}%2C#{@coordinates.second}"%>
-	<table><tr><td col=80%>
-	<%x=65%>
-	<%reds.each do |red|%>
-	
-	<%@mapurl+="&markers=color:blue%7clabel:#{x.chr}%7c#{red["geometry"]["location"]["lat"]}%2C#{red["geometry"]["location"]["lng"]}"%>
-	<%x=x+1%>
-	<%end%>
-	<%= image_tag @mapurl %></td>
-	<td col="20%">	
-	<%x=64%>
-	<%reds.each do |red|%>
-	<%x=x+1%>
-	<div>
-	<ul>
-	
-	<li>
-	<li><a href="#"><p3><%=x.chr%></b> <%= red["name"]%><br><%=red["vicinity"]%>
-		<%price=red["price_level"].to_i%>
-		<%rating=red["rating"].to_i%>
-		|<%=price%>$|<%=rating%>stars| </p3>
-	</a></li>
-	<%end%>
-</ul>
-</div>
-</td></tr></table>
+	<table>
+		<tr>
+			<td>
+				<%x=65%>
+				<%reds.each do |red|%>
+					<%@mapurl+="&markers=color:blue%7clabel:#{x.chr}%7c#{red["geometry"]["location"]["lat"]}%2C#{red["geometry"]["location"]["lng"]}"%>
+					<%x=x+1%>
+				<%end%>
+				<%= image_tag @mapurl %>
+			</td>
+			<td width="250">	
+				<%x=64%>
+				<div>
+					<ul>
+						<%reds.each do |red|%>
+							<%x=x+1%>
+							<li>
+								<a href="#"><h4>(<%=x.chr%>) <%= red["name"]%><br><%=red["vicinity"]%></h4>
+								<%price=red["price_level"].to_i%>
+								<%rating=red["rating"].to_i%>
+								<b>|<%=price%>$|<%=rating%>stars| </b></a>
+							</li>
+						<%end%>
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</table>
 
 <% else %>
-<b>Not mappable, not searchable just print the content </b>
+
 <%= simple_format @page.content %>
 <% end %>
 <% end %>

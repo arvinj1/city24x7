@@ -4,7 +4,7 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import "foundation_and_overrides";
 body { /* quick hack to get things looking nicer */
   margin: 0;
   padding: 0;
@@ -90,4 +90,33 @@ body { /* quick hack to get things looking nicer */
       margin: 5px 0;
     }
   }
+}
+
+ul#board {
+  margin: 0 auto;
+    display:inline-block;
+}
+
+ul#board li {
+  width: 228px;
+  border: 1px dotted #343434;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 2px 2px 0;
+  background-color: #f0eeec;
+  padding: 0;
+  line-height: 168px;
+}
+.custom-panel {
+  @include panel(
+    // Sets the panel background color. Default: $panel-pg
+    
+    // Sets the panel padding amount. Default: $panel-padding
+    $padding:20px,
+    // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
+    $adjust:false
+  );
 }
