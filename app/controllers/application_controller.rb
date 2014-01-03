@@ -16,7 +16,11 @@ class ApplicationController < ActionController::Base
     end
     
     def setupCords
+      logger.info ("Setting up coords")
       @rip=remoteIP
+      logger.info(@rip)
       @coordinates ||= Geocoder.coordinates(@rip)
+      logger.info (@coordinates.first)
+      logger.info(@coordinates.second)
     end
 end

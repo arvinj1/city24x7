@@ -32,7 +32,7 @@
 		var wsUrl="http://api.openweathermap.org/data/2.5/weather?lat=";
 		var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
 		
-		<% @coordinates ||= Geocoder.coordinates(remoteIP()) %>
+		
 		var lat=<%=@coordinates.first%>;
 		var lon=<%=@coordinates.second%>;
 		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric&_nocache=" + cacheBuster;

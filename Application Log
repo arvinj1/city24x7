@@ -20959,3 +20959,1626 @@ I, [2013-12-31T06:22:58.940736 #8625]  INFO -- : Started GET "/assets/icons/when
 I, [2013-12-31T06:22:58.947022 #8625]  INFO -- : Started GET "/assets/icons/where_button_red_active.png" for 127.0.0.1 at 2013-12-31 06:22:58 -0500
 I, [2013-12-31T06:22:58.953782 #8625]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 06:22:58 -0500
 I, [2013-12-31T06:22:58.970421 #8625]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-31 06:22:58 -0500
+I, [2014-01-01T11:42:49.449970 #14963]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-01 11:42:49 -0500
+I, [2014-01-01T11:42:51.367880 #14963]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-01T11:42:56.023102 #14963]  INFO -- :   Rendered pages/_submenu_pages.html.erb (3.1ms)
+I, [2014-01-01T11:42:56.033764 #14963]  INFO -- :   Rendered pages/show.html.erb within layouts/application (912.6ms)
+I, [2014-01-01T11:42:58.068568 #14963]  INFO -- : Completed 500 Internal Server Error in 6700ms
+F, [2014-01-01T11:42:58.071457 #14963] FATAL -- : 
+ActionView::Template::Error (undefined method `remoteIP' for #<#<Class:0x007fc1a30d7e30>:0x007fc1a30d6fd0>):
+    32: 		var wsUrl="http://api.openweathermap.org/data/2.5/weather?lat=";
+    33: 		var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
+    34: 		
+    35: 		<% @coordinates ||= Geocoder.coordinates(remoteIP()) %>
+    36: 		var lat=<%=@coordinates.first%>;
+    37: 		var lon=<%=@coordinates.second%>;
+    38: 		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric&_nocache=" + cacheBuster;
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb___3541979635057742689_70234807436080'
+  app/controllers/pages_controller.rb:46:in `main'
+
+
+I, [2014-01-01T11:42:58.254529 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (57.3ms)
+I, [2014-01-01T11:42:58.294038 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+I, [2014-01-01T11:42:58.294239 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (121.8ms)
+I, [2014-01-01T11:43:45.161112 #14963]  INFO -- : Started GET "/pages" for 127.0.0.1 at 2014-01-01 11:43:45 -0500
+I, [2014-01-01T11:43:45.166797 #14963]  INFO -- : Processing by PagesController#index as HTML
+I, [2014-01-01T11:43:51.218489 #14963]  INFO -- :   Rendered pages/index.html.erb within layouts/application (11.0ms)
+I, [2014-01-01T11:43:51.241403 #14963]  INFO -- : Completed 500 Internal Server Error in 6074ms
+F, [2014-01-01T11:43:51.244017 #14963] FATAL -- : 
+ActionView::Template::Error (undefined method `remoteIP' for #<#<Class:0x007fc1a30d7e30>:0x007fc1a2513040>):
+    32: 		var wsUrl="http://api.openweathermap.org/data/2.5/weather?lat=";
+    33: 		var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
+    34: 		
+    35: 		<% @coordinates ||= Geocoder.coordinates(remoteIP()) %>
+    36: 		var lat=<%=@coordinates.first%>;
+    37: 		var lon=<%=@coordinates.second%>;
+    38: 		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric&_nocache=" + cacheBuster;
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb___3541979635057742689_70234807436080'
+
+
+I, [2014-01-01T11:43:51.268282 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+I, [2014-01-01T11:43:51.275113 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+I, [2014-01-01T11:43:51.275289 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.3ms)
+I, [2014-01-01T11:43:51.805312 #14963]  INFO -- : Started GET "/pages/new" for 127.0.0.1 at 2014-01-01 11:43:51 -0500
+I, [2014-01-01T11:43:51.811618 #14963]  INFO -- : Processing by PagesController#new as HTML
+I, [2014-01-01T11:43:58.035534 #14963]  INFO -- :   Rendered pages/_form.html.erb (176.4ms)
+I, [2014-01-01T11:43:58.035919 #14963]  INFO -- :   Rendered pages/new.html.erb within layouts/application (192.0ms)
+I, [2014-01-01T11:43:58.055729 #14963]  INFO -- : Completed 500 Internal Server Error in 6244ms
+F, [2014-01-01T11:43:58.058334 #14963] FATAL -- : 
+ActionView::Template::Error (undefined method `remoteIP' for #<#<Class:0x007fc1a30d7e30>:0x007fc1a60124e8>):
+    32: 		var wsUrl="http://api.openweathermap.org/data/2.5/weather?lat=";
+    33: 		var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
+    34: 		
+    35: 		<% @coordinates ||= Geocoder.coordinates(remoteIP()) %>
+    36: 		var lat=<%=@coordinates.first%>;
+    37: 		var lon=<%=@coordinates.second%>;
+    38: 		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric&_nocache=" + cacheBuster;
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb___3541979635057742689_70234807436080'
+
+
+I, [2014-01-01T11:43:58.082453 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+I, [2014-01-01T11:43:58.089649 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+I, [2014-01-01T11:43:58.089846 #14963]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+I, [2014-01-01T11:58:02.664282 #15179]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-01 11:58:02 -0500
+I, [2014-01-01T11:58:02.849053 #15179]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-01T11:58:06.052729 #15179]  INFO -- :   Rendered pages/_submenu_pages.html.erb (2.9ms)
+I, [2014-01-01T11:58:06.060397 #15179]  INFO -- :   Rendered pages/show.html.erb within layouts/application (38.5ms)
+I, [2014-01-01T11:58:06.243347 #15179]  INFO -- : Completed 500 Internal Server Error in 3394ms
+F, [2014-01-01T11:58:06.246132 #15179] FATAL -- : 
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    33: 		var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
+    34: 		
+    35: 		
+    36: 		var lat=<%=@coordinates.first%>;
+    37: 		var lon=<%=@coordinates.second%>;
+    38: 		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric&_nocache=" + cacheBuster;
+    39: 		
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__2398143967746162726_70279951854180'
+  app/controllers/pages_controller.rb:46:in `main'
+
+
+I, [2014-01-01T11:58:06.288392 #15179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+I, [2014-01-01T11:58:06.303767 #15179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+I, [2014-01-01T11:58:06.303955 #15179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.1ms)
+I, [2014-01-01T11:59:02.723336 #15220]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-01 11:59:02 -0500
+I, [2014-01-01T11:59:02.897132 #15220]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-01T11:59:02.923707 #15220]  INFO -- : Setting up coords
+I, [2014-01-01T11:59:06.076885 #15220]  INFO -- :   Rendered pages/_submenu_pages.html.erb (3.3ms)
+I, [2014-01-01T11:59:06.085397 #15220]  INFO -- :   Rendered pages/show.html.erb within layouts/application (87.9ms)
+I, [2014-01-01T11:59:06.143308 #15220]  INFO -- : Completed 500 Internal Server Error in 3246ms
+F, [2014-01-01T11:59:06.147642 #15220] FATAL -- : 
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    33: 		var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
+    34: 		
+    35: 		
+    36: 		var lat=<%=@coordinates.first%>;
+    37: 		var lon=<%=@coordinates.second%>;
+    38: 		wsUrl=wsUrl+lat+"&lon="+lon+"&units=metric&_nocache=" + cacheBuster;
+    39: 		
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__4570890133866956007_70108750728600'
+  app/controllers/pages_controller.rb:46:in `main'
+
+
+I, [2014-01-01T11:59:06.175394 #15220]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+I, [2014-01-01T11:59:06.185216 #15220]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+I, [2014-01-01T11:59:06.185432 #15220]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.6ms)
+I, [2014-01-01T11:59:48.345436 #15243]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-01 11:59:48 -0500
+F, [2014-01-01T11:59:48.438585 #15243] FATAL -- : 
+SyntaxError (/Users/aravind/work/C247/c247/app/controllers/application_controller.rb:22: syntax error, unexpected tIVAR, expecting ')'
+      logger.info (@coordiantes.first","@coordinates.second)
+                                                    ^
+/Users/aravind/work/C247/c247/app/controllers/application_controller.rb:22: syntax error, unexpected ')', expecting keyword_end):
+  app/controllers/pages_controller.rb:1:in `<top (required)>'
+
+
+I, [2014-01-01T11:59:48.540352 #15243]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+I, [2014-01-01T11:59:48.548914 #15243]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+I, [2014-01-01T11:59:48.583546 #15243]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.5ms)
+I, [2014-01-01T11:59:48.583759 #15243]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (101.4ms)
+I, [2014-01-01T12:00:18.238503 #15290]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-01 12:00:18 -0500
+F, [2014-01-01T12:00:18.291057 #15290] FATAL -- : 
+SyntaxError (/Users/aravind/work/C247/c247/app/controllers/application_controller.rb:22: syntax error, unexpected ',', expecting ')'
+      logger.info (@coordiantes.first,",",@coordinates.second)
+                                      ^
+/Users/aravind/work/C247/c247/app/controllers/application_controller.rb:22: syntax error, unexpected ',', expecting keyword_end
+      logger.info (@coordiantes.first,",",@coordinates.second)
+                                          ^
+/Users/aravind/work/C247/c247/app/controllers/application_controller.rb:22: syntax error, unexpected ')', expecting keyword_end):
+  app/controllers/pages_controller.rb:1:in `<top (required)>'
+
+
+I, [2014-01-01T12:00:18.378959 #15290]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+I, [2014-01-01T12:00:18.387761 #15290]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+I, [2014-01-01T12:00:18.422979 #15290]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.8ms)
+I, [2014-01-01T12:00:18.423337 #15290]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.6ms)
+I, [2014-01-01T12:01:00.776606 #15313]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-01 12:01:00 -0500
+I, [2014-01-01T12:01:00.834948 #15313]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-01T12:01:00.860966 #15313]  INFO -- : Setting up coords
+I, [2014-01-01T12:01:00.861967 #15313]  INFO -- : 69.124.17.8
+I, [2014-01-01T12:01:03.917571 #15313]  INFO -- : Completed 500 Internal Server Error in 3082ms
+F, [2014-01-01T12:01:03.920378 #15313] FATAL -- : 
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/application_controller.rb:23:in `setupCords'
+
+
+I, [2014-01-01T12:01:03.953964 #15313]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+I, [2014-01-01T12:01:03.963163 #15313]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+I, [2014-01-01T12:01:03.973024 #15313]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+I, [2014-01-01T12:01:03.973212 #15313]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+I, [2014-01-01T12:08:15.933352 #15381]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-01 12:08:15 -0500
+I, [2014-01-01T12:08:16.023302 #15381]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-01T12:08:16.049569 #15381]  INFO -- : Setting up coords
+I, [2014-01-01T12:08:16.050488 #15381]  INFO -- : 69.124.17.8
+I, [2014-01-01T12:08:21.104187 #15381]  INFO -- : Completed 500 Internal Server Error in 5080ms
+F, [2014-01-01T12:08:21.107379 #15381] FATAL -- : 
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/application_controller.rb:23:in `setupCords'
+
+
+I, [2014-01-01T12:08:21.139796 #15381]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+I, [2014-01-01T12:08:21.147873 #15381]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+I, [2014-01-01T12:08:21.157517 #15381]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+I, [2014-01-01T12:08:21.157709 #15381]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.0ms)
+I, [2014-01-01T12:09:07.204198 #15387]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-01 12:09:07 -0500
+I, [2014-01-01T12:09:07.261377 #15387]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-01T12:09:07.287705 #15387]  INFO -- : Setting up coords
+I, [2014-01-01T12:09:07.288654 #15387]  INFO -- : 69.124.17.8
+I, [2014-01-01T12:09:37.293038 #15387]  INFO -- : Completed 500 Internal Server Error in 30031ms
+F, [2014-01-01T12:09:37.295689 #15387] FATAL -- : 
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/application_controller.rb:23:in `setupCords'
+
+
+I, [2014-01-01T12:09:37.378644 #15387]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+I, [2014-01-01T12:09:37.386376 #15387]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+I, [2014-01-01T12:09:37.395135 #15387]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+I, [2014-01-01T12:09:37.395312 #15387]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.8ms)
+I, [2014-01-02T12:17:32.363366 #15387]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-02 12:17:32 -0500
+I, [2014-01-02T12:17:32.486861 #15387]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-02T12:17:32.487571 #15387]  INFO -- : Setting up coords
+I, [2014-01-02T12:17:32.487719 #15387]  INFO -- : 69.124.17.8
+I, [2014-01-02T12:18:02.491254 #15387]  INFO -- : Completed 500 Internal Server Error in 30004ms
+F, [2014-01-02T12:18:02.493179 #15387] FATAL -- : 
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/application_controller.rb:23:in `setupCords'
+
+
+I, [2014-01-02T12:18:02.546819 #15387]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+I, [2014-01-02T12:18:02.556220 #15387]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+I, [2014-01-02T12:18:02.570817 #15387]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+I, [2014-01-02T12:18:02.571156 #15387]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.5ms)
+I, [2014-01-02T12:21:05.164442 #15591]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-02 12:21:05 -0500
+I, [2014-01-02T12:21:05.307688 #15591]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-02T12:21:05.338077 #15591]  INFO -- : Setting up coords
+I, [2014-01-02T12:21:05.339014 #15591]  INFO -- : 69.124.17.8
+I, [2014-01-02T12:21:20.342880 #15591]  INFO -- : Completed 500 Internal Server Error in 15035ms
+F, [2014-01-02T12:21:20.345134 #15591] FATAL -- : 
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/application_controller.rb:23:in `setupCords'
+
+
+I, [2014-01-02T12:21:20.440157 #15591]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+I, [2014-01-02T12:21:20.448166 #15591]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+I, [2014-01-02T12:21:20.456902 #15591]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+I, [2014-01-02T12:21:20.457135 #15591]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.3ms)
+I, [2014-01-02T20:21:08.222582 #16083]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-01-02 20:21:08 -0500
+I, [2014-01-02T20:21:08.763435 #16083]  INFO -- : Processing by PagesController#main as HTML
+I, [2014-01-02T20:21:08.837353 #16083]  INFO -- : Setting up coords
+I, [2014-01-02T20:21:08.838560 #16083]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:21:11.067005 #16083]  INFO -- : 40.5516
+I, [2014-01-02T20:21:11.067118 #16083]  INFO -- : -74.4637
+I, [2014-01-02T20:21:11.414520 #16083]  INFO -- :   Rendered pages/_submenu_pages.html.erb (2.7ms)
+I, [2014-01-02T20:21:11.423180 #16083]  INFO -- :   Rendered pages/show.html.erb within layouts/application (143.1ms)
+I, [2014-01-02T20:21:12.521932 #16083]  INFO -- : Completed 200 OK in 3758ms (Views: 1181.7ms | ActiveRecord: 135.3ms)
+I, [2014-01-02T20:21:13.154459 #16083]  INFO -- : Started GET "/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+F, [2014-01-02T20:21:13.159516 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:13.267110 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+I, [2014-01-02T20:21:13.294371 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+I, [2014-01-02T20:21:13.379506 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (63.3ms)
+I, [2014-01-02T20:21:13.379698 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (130.5ms)
+I, [2014-01-02T20:21:13.381318 #16083]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.409985 #16083]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.424331 #16083]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.434403 #16083]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.441939 #16083]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.453297 #16083]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.502421 #16083]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+F, [2014-01-02T20:21:13.517528 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:13.537538 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+I, [2014-01-02T20:21:13.554681 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+I, [2014-01-02T20:21:13.624472 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (63.8ms)
+I, [2014-01-02T20:21:13.624681 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (95.7ms)
+I, [2014-01-02T20:21:13.626596 #16083]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.639462 #16083]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.649304 #16083]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.658341 #16083]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.669898 #16083]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.681252 #16083]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.692030 #16083]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.701600 #16083]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.711278 #16083]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.721675 #16083]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.737001 #16083]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.745775 #16083]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.757497 #16083]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.764692 #16083]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.772822 #16083]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.787703 #16083]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.812873 #16083]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.990930 #16083]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:13.999879 #16083]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:13 -0500
+I, [2014-01-02T20:21:14.008875 #16083]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.038086 #16083]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.047691 #16083]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.057459 #16083]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.132288 #16083]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.171060 #16083]  INFO -- : Started GET "/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+F, [2014-01-02T20:21:14.177677 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:14.193293 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+I, [2014-01-02T20:21:14.208619 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+I, [2014-01-02T20:21:14.215126 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+I, [2014-01-02T20:21:14.215330 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.1ms)
+I, [2014-01-02T20:21:14.216939 #16083]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.231864 #16083]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.240338 #16083]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.247018 #16083]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.312936 #16083]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.376203 #16083]  INFO -- : Started GET "/assets/icons/where_button_touch.png" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.384209 #16083]  INFO -- : Started GET "/assets/icons/what_shopping_icon_touch.png" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.480327 #16083]  INFO -- : Started GET "/assets/icons/bar_food.png" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:14.548462 #16083]  INFO -- : Started GET "/assets/icons/nearby_new.png" for 127.0.0.1 at 2014-01-02 20:21:14 -0500
+I, [2014-01-02T20:21:25.149461 #16083]  INFO -- : Started GET "/pages/42" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.156950 #16083]  INFO -- : Processing by PagesController#show as HTML
+I, [2014-01-02T20:21:25.157093 #16083]  INFO -- :   Parameters: {"id"=>"42"}
+I, [2014-01-02T20:21:25.157932 #16083]  INFO -- : Setting up coords
+I, [2014-01-02T20:21:25.158096 #16083]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:21:25.158813 #16083]  INFO -- : 40.5516
+I, [2014-01-02T20:21:25.158923 #16083]  INFO -- : -74.4637
+I, [2014-01-02T20:21:25.250199 #16083]  INFO -- :   Rendered pages/_submenu_pages.html.erb (2.1ms)
+I, [2014-01-02T20:21:25.294086 #16083]  INFO -- :   Rendered pages/show.html.erb within layouts/application (95.0ms)
+I, [2014-01-02T20:21:25.313178 #16083]  INFO -- : Completed 200 OK in 156ms (Views: 103.6ms | ActiveRecord: 47.8ms)
+I, [2014-01-02T20:21:25.339824 #16083]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.373355 #16083]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.384126 #16083]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+F, [2014-01-02T20:21:25.396043 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:25.411329 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+I, [2014-01-02T20:21:25.427706 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+I, [2014-01-02T20:21:25.503014 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+I, [2014-01-02T20:21:25.503220 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (99.3ms)
+I, [2014-01-02T20:21:25.504963 #16083]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.511412 #16083]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.516323 #16083]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+F, [2014-01-02T20:21:25.525641 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:25.543654 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+I, [2014-01-02T20:21:25.561442 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+I, [2014-01-02T20:21:25.569215 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+I, [2014-01-02T20:21:25.569442 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.6ms)
+I, [2014-01-02T20:21:25.571854 #16083]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.577132 #16083]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.696488 #16083]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.708304 #16083]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.717539 #16083]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+F, [2014-01-02T20:21:25.724740 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:25.743985 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+I, [2014-01-02T20:21:25.759562 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+I, [2014-01-02T20:21:25.767522 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+I, [2014-01-02T20:21:25.767728 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.4ms)
+I, [2014-01-02T20:21:25.769497 #16083]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.777081 #16083]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.782356 #16083]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.786725 #16083]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.791909 #16083]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.796797 #16083]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.837321 #16083]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.849272 #16083]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.858499 #16083]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.865504 #16083]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.869929 #16083]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.880974 #16083]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.888214 #16083]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.898143 #16083]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.902881 #16083]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.907950 #16083]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.916063 #16083]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.925397 #16083]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.931842 #16083]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.940728 #16083]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.949247 #16083]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.962020 #16083]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.969412 #16083]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.976243 #16083]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.980705 #16083]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.985069 #16083]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.989755 #16083]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:25.994533 #16083]  INFO -- : Started GET "/assets/icons/where_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:21:25 -0500
+I, [2014-01-02T20:21:26.847963 #16083]  INFO -- : Started GET "/pages/38" for 127.0.0.1 at 2014-01-02 20:21:26 -0500
+I, [2014-01-02T20:21:26.854108 #16083]  INFO -- : Processing by PagesController#show as HTML
+I, [2014-01-02T20:21:26.854238 #16083]  INFO -- :   Parameters: {"id"=>"38"}
+I, [2014-01-02T20:21:26.855060 #16083]  INFO -- : Setting up coords
+I, [2014-01-02T20:21:26.855213 #16083]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:21:26.855936 #16083]  INFO -- : 40.5516
+I, [2014-01-02T20:21:26.856058 #16083]  INFO -- : -74.4637
+I, [2014-01-02T20:21:26.869273 #16083]  INFO -- :   Rendered pages/_submenu_pages.html.erb (1.9ms)
+I, [2014-01-02T20:21:26.876100 #16083]  INFO -- :   Rendered pages/show.html.erb within layouts/application (15.2ms)
+I, [2014-01-02T20:21:26.894628 #16083]  INFO -- : Completed 200 OK in 40ms (Views: 33.9ms | ActiveRecord: 2.8ms)
+I, [2014-01-02T20:21:27.043090 #16083]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.096306 #16083]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.123081 #16083]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.132352 #16083]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.136775 #16083]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.146617 #16083]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.153416 #16083]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+F, [2014-01-02T20:21:27.161640 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:27.177343 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+I, [2014-01-02T20:21:27.194493 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+I, [2014-01-02T20:21:27.201501 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+I, [2014-01-02T20:21:27.201694 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.4ms)
+I, [2014-01-02T20:21:27.203270 #16083]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+F, [2014-01-02T20:21:27.208722 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:27.225971 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+I, [2014-01-02T20:21:27.241594 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+I, [2014-01-02T20:21:27.248641 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+I, [2014-01-02T20:21:27.248850 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.9ms)
+I, [2014-01-02T20:21:27.325585 #16083]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.333261 #16083]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+F, [2014-01-02T20:21:27.340268 #16083] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:21:27.356277 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+I, [2014-01-02T20:21:27.372819 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+I, [2014-01-02T20:21:27.380363 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+I, [2014-01-02T20:21:27.380585 #16083]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.6ms)
+I, [2014-01-02T20:21:27.382278 #16083]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.391177 #16083]  INFO -- : Started GET "/assets/icons/where_button_touch.png" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.398562 #16083]  INFO -- : Started GET "/assets/icons/what_shopping_icon_touch.png" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.405952 #16083]  INFO -- : Started GET "/assets/icons/nearby_new.png" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.413919 #16083]  INFO -- : Started GET "/assets/icons/bar_food.png" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.426413 #16083]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.432498 #16083]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.437786 #16083]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.451407 #16083]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.456085 #16083]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.470648 #16083]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.475552 #16083]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.535647 #16083]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.546570 #16083]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.553114 #16083]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.557551 #16083]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.566715 #16083]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.572185 #16083]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.581861 #16083]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.586698 #16083]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.596902 #16083]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.603613 #16083]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.610883 #16083]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.617511 #16083]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.624920 #16083]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.629998 #16083]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.636611 #16083]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.643024 #16083]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.653048 #16083]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.657789 #16083]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.664440 #16083]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:21:27.669231 #16083]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:21:27 -0500
+I, [2014-01-02T20:27:35.915652 #16179]  INFO -- : Started GET "/pages/38" for 127.0.0.1 at 2014-01-02 20:27:35 -0500
+I, [2014-01-02T20:27:36.415980 #16179]  INFO -- : Processing by PagesController#show as HTML
+I, [2014-01-02T20:27:36.416131 #16179]  INFO -- :   Parameters: {"id"=>"38"}
+I, [2014-01-02T20:27:36.473525 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:27:36.474485 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:27:36.475580 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:27:36.475699 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:27:37.334393 #16179]  INFO -- :   Rendered pages/_submenu_pages.html.erb (3.8ms)
+I, [2014-01-02T20:27:37.342884 #16179]  INFO -- :   Rendered pages/show.html.erb within layouts/application (83.7ms)
+I, [2014-01-02T20:27:38.233205 #16179]  INFO -- : Completed 200 OK in 1817ms (Views: 1673.2ms | ActiveRecord: 19.1ms)
+I, [2014-01-02T20:27:38.293408 #16179]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+F, [2014-01-02T20:27:38.312944 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:38.443828 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+I, [2014-01-02T20:27:38.472377 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+I, [2014-01-02T20:27:38.580254 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (84.3ms)
+I, [2014-01-02T20:27:38.580443 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (155.0ms)
+I, [2014-01-02T20:27:38.582087 #16179]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+F, [2014-01-02T20:27:38.588125 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:38.605435 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+I, [2014-01-02T20:27:38.624980 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+I, [2014-01-02T20:27:38.633188 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+I, [2014-01-02T20:27:38.633452 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.0ms)
+I, [2014-01-02T20:27:38.635687 #16179]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.666651 #16179]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.686943 #16179]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.766570 #16179]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+F, [2014-01-02T20:27:38.771386 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:38.797715 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+I, [2014-01-02T20:27:38.815693 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+I, [2014-01-02T20:27:38.822750 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+I, [2014-01-02T20:27:38.822956 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.6ms)
+I, [2014-01-02T20:27:38.824489 #16179]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.836531 #16179]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.847992 #16179]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.883365 #16179]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.896426 #16179]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.908428 #16179]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.928787 #16179]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.941541 #16179]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.957861 #16179]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.969645 #16179]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.987714 #16179]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:38.998627 #16179]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:38 -0500
+I, [2014-01-02T20:27:39.010129 #16179]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.018810 #16179]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.028130 #16179]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.036728 #16179]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.050314 #16179]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.065585 #16179]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.075782 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.085340 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.095136 #16179]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.105129 #16179]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.132348 #16179]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.140644 #16179]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.156721 #16179]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.239067 #16179]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.247270 #16179]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.266418 #16179]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.290918 #16179]  INFO -- : Started GET "/assets/icons/what_shopping_icon_touch.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.307254 #16179]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.347383 #16179]  INFO -- : Started GET "/assets/icons/nearby_new.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.367943 #16179]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.381985 #16179]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.403002 #16179]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.411796 #16179]  INFO -- : Started GET "/pages/44" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.418002 #16179]  INFO -- : Processing by PagesController#show as HTML
+I, [2014-01-02T20:27:39.418114 #16179]  INFO -- :   Parameters: {"id"=>"44"}
+I, [2014-01-02T20:27:39.418864 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:27:39.419018 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:27:39.419723 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:27:39.419820 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:27:39.451785 #16179]  INFO -- :   Rendered pages/_submenu_pages.html.erb (0.1ms)
+I, [2014-01-02T20:27:39.480141 #16179]  INFO -- :   Rendered pages/show.html.erb within layouts/application (54.5ms)
+I, [2014-01-02T20:27:39.501873 #16179]  INFO -- : Completed 200 OK in 83ms (Views: 72.0ms | ActiveRecord: 7.9ms)
+I, [2014-01-02T20:27:39.504563 #16179]  INFO -- : Started GET "/assets/icons/bar_food.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.531073 #16179]  INFO -- : Started GET "/assets/icons/where_button_touch.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.561976 #16179]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.582144 #16179]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.595002 #16179]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.601965 #16179]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.608693 #16179]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.618354 #16179]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.624585 #16179]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+F, [2014-01-02T20:27:39.638347 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:39.657670 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+I, [2014-01-02T20:27:39.681686 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+I, [2014-01-02T20:27:39.689386 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+I, [2014-01-02T20:27:39.689613 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (41.8ms)
+I, [2014-01-02T20:27:39.692754 #16179]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+F, [2014-01-02T20:27:39.698437 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:39.718000 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+I, [2014-01-02T20:27:39.799122 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (68.5ms)
+I, [2014-01-02T20:27:39.808827 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+I, [2014-01-02T20:27:39.809058 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (99.8ms)
+I, [2014-01-02T20:27:39.810801 #16179]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+F, [2014-01-02T20:27:39.818641 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:39.835798 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+I, [2014-01-02T20:27:39.853488 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+I, [2014-01-02T20:27:39.859925 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2014-01-02T20:27:39.860127 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.2ms)
+I, [2014-01-02T20:27:39.862272 #16179]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.873491 #16179]  INFO -- : Started GET "/assets/icons/where_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.895148 #16179]  INFO -- : Started GET "/assets/icons/when_button_touch.png" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.906423 #16179]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.911783 #16179]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.918194 #16179]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.923343 #16179]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.928052 #16179]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.935772 #16179]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.945283 #16179]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.952055 #16179]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.961216 #16179]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.978874 #16179]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:39.986357 #16179]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:40.002789 #16179]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:39 -0500
+I, [2014-01-02T20:27:40.009172 #16179]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.023587 #16179]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.031095 #16179]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.036164 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.048728 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.055714 #16179]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.062806 #16179]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.068587 #16179]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.073628 #16179]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.082264 #16179]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.093856 #16179]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.101122 #16179]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.105143 #16179]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.109260 #16179]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:40.114762 #16179]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:40 -0500
+I, [2014-01-02T20:27:42.185338 #16179]  INFO -- : Started GET "/pages/43" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.190058 #16179]  INFO -- : Processing by PagesController#show as HTML
+I, [2014-01-02T20:27:42.190167 #16179]  INFO -- :   Parameters: {"id"=>"43"}
+I, [2014-01-02T20:27:42.190826 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:27:42.190968 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:27:42.191584 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:27:42.191686 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:27:42.218742 #16179]  INFO -- :   Rendered pages/_submenu_pages.html.erb (1.9ms)
+I, [2014-01-02T20:27:42.224985 #16179]  INFO -- :   Rendered pages/show.html.erb within layouts/application (28.8ms)
+I, [2014-01-02T20:27:42.243570 #16179]  INFO -- : Completed 200 OK in 53ms (Views: 34.2ms | ActiveRecord: 15.9ms)
+I, [2014-01-02T20:27:42.274042 #16179]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.282352 #16179]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.303143 #16179]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.312617 #16179]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+F, [2014-01-02T20:27:42.322408 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:42.337858 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+I, [2014-01-02T20:27:42.356613 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+I, [2014-01-02T20:27:42.363625 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+I, [2014-01-02T20:27:42.363824 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.7ms)
+I, [2014-01-02T20:27:42.366155 #16179]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.372374 #16179]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.381286 #16179]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.391959 #16179]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+F, [2014-01-02T20:27:42.398958 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:42.415092 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+I, [2014-01-02T20:27:42.430046 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+I, [2014-01-02T20:27:42.437425 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+I, [2014-01-02T20:27:42.437642 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.3ms)
+I, [2014-01-02T20:27:42.439244 #16179]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+F, [2014-01-02T20:27:42.444883 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:42.463720 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+I, [2014-01-02T20:27:42.479335 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+I, [2014-01-02T20:27:42.558238 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (72.9ms)
+I, [2014-01-02T20:27:42.558445 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (103.1ms)
+I, [2014-01-02T20:27:42.560579 #16179]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.568306 #16179]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.573085 #16179]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.583137 #16179]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.590092 #16179]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.598844 #16179]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.608429 #16179]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.613928 #16179]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.619426 #16179]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.626270 #16179]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.633790 #16179]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.644235 #16179]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.652042 #16179]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.658011 #16179]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.662760 #16179]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.671582 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.679311 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.684366 #16179]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.695103 #16179]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.704238 #16179]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.709105 #16179]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.719843 #16179]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.732150 #16179]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.738940 #16179]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.752656 #16179]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.760076 #16179]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.765390 #16179]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.770671 #16179]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.779582 #16179]  INFO -- : Started GET "/assets/icons/where_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:42.785705 #16179]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:42 -0500
+I, [2014-01-02T20:27:49.241924 #16179]  INFO -- : Started GET "/pages/" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.246784 #16179]  INFO -- : Processing by PagesController#index as HTML
+I, [2014-01-02T20:27:49.247475 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:27:49.247622 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:27:49.248270 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:27:49.248371 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:27:49.276772 #16179]  INFO -- :   Rendered pages/index.html.erb within layouts/application (12.1ms)
+I, [2014-01-02T20:27:49.296213 #16179]  INFO -- : Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.6ms)
+I, [2014-01-02T20:27:49.330065 #16179]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+F, [2014-01-02T20:27:49.342841 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:49.371882 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+I, [2014-01-02T20:27:49.400880 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+I, [2014-01-02T20:27:49.410965 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+I, [2014-01-02T20:27:49.411232 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.6ms)
+I, [2014-01-02T20:27:49.413833 #16179]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.419912 #16179]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.431118 #16179]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.439588 #16179]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.445627 #16179]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.454459 #16179]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.468813 #16179]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.483516 #16179]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+F, [2014-01-02T20:27:49.490594 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:49.514793 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+I, [2014-01-02T20:27:49.532077 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+I, [2014-01-02T20:27:49.540154 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+I, [2014-01-02T20:27:49.540385 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (36.4ms)
+I, [2014-01-02T20:27:49.545460 #16179]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.558392 #16179]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.563894 #16179]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.575321 #16179]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.581048 #16179]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+F, [2014-01-02T20:27:49.585536 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:49.623757 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+I, [2014-01-02T20:27:49.641707 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+I, [2014-01-02T20:27:49.649637 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+I, [2014-01-02T20:27:49.649912 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.2ms)
+I, [2014-01-02T20:27:49.652052 #16179]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.658184 #16179]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.665889 #16179]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.674621 #16179]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.696167 #16179]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.703509 #16179]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.711062 #16179]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.735462 #16179]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.749327 #16179]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.760578 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.772194 #16179]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.778225 #16179]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.790613 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.876690 #16179]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.884440 #16179]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.889479 #16179]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.895005 #16179]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.908147 #16179]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.920433 #16179]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.925216 #16179]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.937147 #16179]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.947691 #16179]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.961933 #16179]  INFO -- : Started GET "/pages/38" for 127.0.0.1 at 2014-01-02 20:27:49 -0500
+I, [2014-01-02T20:27:49.967641 #16179]  INFO -- : Processing by PagesController#show as HTML
+I, [2014-01-02T20:27:49.967767 #16179]  INFO -- :   Parameters: {"id"=>"38"}
+I, [2014-01-02T20:27:49.968556 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:27:49.968714 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:27:49.969452 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:27:49.969570 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:27:49.985143 #16179]  INFO -- :   Rendered pages/_submenu_pages.html.erb (2.5ms)
+I, [2014-01-02T20:27:49.993317 #16179]  INFO -- :   Rendered pages/show.html.erb within layouts/application (18.6ms)
+I, [2014-01-02T20:27:50.016990 #16179]  INFO -- : Completed 200 OK in 49ms (Views: 41.8ms | ActiveRecord: 3.4ms)
+I, [2014-01-02T20:27:50.019608 #16179]  INFO -- : Started GET "/assets/icons/when_button_touch.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.028268 #16179]  INFO -- : Started GET "/assets/icons/bar_food.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.047382 #16179]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.054568 #16179]  INFO -- : Started GET "/assets/icons/where_button_touch.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.059692 #16179]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.070549 #16179]  INFO -- : Started GET "/assets/icons/where_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.084262 #16179]  INFO -- : Started GET "/assets/icons/what_shopping_icon_touch.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.090513 #16179]  INFO -- : Started GET "/assets/icons/nearby_new.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.107933 #16179]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.140173 #16179]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.147108 #16179]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.154753 #16179]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.163860 #16179]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.177369 #16179]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.193407 #16179]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+F, [2014-01-02T20:27:50.204076 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:50.220530 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+I, [2014-01-02T20:27:50.236785 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+I, [2014-01-02T20:27:50.244664 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+I, [2014-01-02T20:27:50.244883 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.2ms)
+I, [2014-01-02T20:27:50.246358 #16179]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+F, [2014-01-02T20:27:50.251256 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:50.269933 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+I, [2014-01-02T20:27:50.288099 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+I, [2014-01-02T20:27:50.296532 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+I, [2014-01-02T20:27:50.296804 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.5ms)
+I, [2014-01-02T20:27:50.298520 #16179]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.306457 #16179]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+F, [2014-01-02T20:27:50.314672 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:27:50.335387 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+I, [2014-01-02T20:27:50.350060 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+I, [2014-01-02T20:27:50.356538 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2014-01-02T20:27:50.356718 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.2ms)
+I, [2014-01-02T20:27:50.358191 #16179]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.363128 #16179]  INFO -- : Started GET "/assets/icons/where_button_touch.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.368968 #16179]  INFO -- : Started GET "/assets/icons/what_shopping_icon_touch.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.374262 #16179]  INFO -- : Started GET "/assets/icons/nearby_new.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.392616 #16179]  INFO -- : Started GET "/assets/icons/bar_food.png" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.401031 #16179]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.406579 #16179]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.411741 #16179]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.420946 #16179]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.428874 #16179]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.439687 #16179]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.444978 #16179]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.449818 #16179]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.457277 #16179]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.467680 #16179]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.475795 #16179]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.486869 #16179]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.491989 #16179]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.497334 #16179]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.504595 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.533685 #16179]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.542215 #16179]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.567981 #16179]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.577295 #16179]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.584473 #16179]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.594023 #16179]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.601826 #16179]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.608601 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.616252 #16179]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.625069 #16179]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.632239 #16179]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:27:50.641964 #16179]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:27:50 -0500
+I, [2014-01-02T20:28:05.839813 #16179]  INFO -- : Started GET "/pages/39/edit" for 127.0.0.1 at 2014-01-02 20:28:05 -0500
+I, [2014-01-02T20:28:05.920873 #16179]  INFO -- : Processing by PagesController#edit as HTML
+I, [2014-01-02T20:28:05.920990 #16179]  INFO -- :   Parameters: {"id"=>"39"}
+I, [2014-01-02T20:28:05.921727 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:28:05.921877 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:28:05.922542 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:28:05.922630 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:28:06.089303 #16179]  INFO -- :   Rendered pages/_form.html.erb (133.8ms)
+I, [2014-01-02T20:28:06.089991 #16179]  INFO -- :   Rendered pages/edit.html.erb within layouts/application (143.3ms)
+I, [2014-01-02T20:28:06.107613 #16179]  INFO -- : Completed 200 OK in 186ms (Views: 180.8ms | ActiveRecord: 2.1ms)
+I, [2014-01-02T20:28:06.201552 #16179]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.207275 #16179]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+F, [2014-01-02T20:28:06.229043 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:06.247429 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+I, [2014-01-02T20:28:06.266494 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+I, [2014-01-02T20:28:06.275010 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+I, [2014-01-02T20:28:06.275269 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.2ms)
+I, [2014-01-02T20:28:06.277485 #16179]  INFO -- : Started GET "/pages/39/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+F, [2014-01-02T20:28:06.285502 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/39/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:06.302461 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+I, [2014-01-02T20:28:06.319715 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+I, [2014-01-02T20:28:06.327888 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+I, [2014-01-02T20:28:06.328130 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.3ms)
+I, [2014-01-02T20:28:06.330110 #16179]  INFO -- : Started GET "/pages/39/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+F, [2014-01-02T20:28:06.338934 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/39/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:06.357652 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+I, [2014-01-02T20:28:06.375871 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+I, [2014-01-02T20:28:06.383883 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+I, [2014-01-02T20:28:06.384115 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.4ms)
+I, [2014-01-02T20:28:06.387429 #16179]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.397675 #16179]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.407825 #16179]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.422002 #16179]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.431759 #16179]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.437104 #16179]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.442711 #16179]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.452506 #16179]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.464515 #16179]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.469975 #16179]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.480088 #16179]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.489234 #16179]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.495503 #16179]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.507883 #16179]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.517080 #16179]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.530761 #16179]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.536972 #16179]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.543707 #16179]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.550005 #16179]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.632141 #16179]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.640843 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.645325 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.653643 #16179]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.665098 #16179]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.669411 #16179]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.674903 #16179]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.682866 #16179]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.692291 #16179]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.699240 #16179]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.709116 #16179]  INFO -- : Started GET "/pages/39" for 127.0.0.1 at 2014-01-02 20:28:06 -0500
+I, [2014-01-02T20:28:06.715512 #16179]  INFO -- : Processing by PagesController#show as HTML
+I, [2014-01-02T20:28:06.715629 #16179]  INFO -- :   Parameters: {"id"=>"39"}
+I, [2014-01-02T20:28:06.716405 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:28:06.716561 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:28:06.721704 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:28:06.721856 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:28:06.738810 #16179]  INFO -- :   Rendered pages/_submenu_pages.html.erb (1.8ms)
+I, [2014-01-02T20:28:09.135998 #16179]  INFO -- :   Rendered pages/show.html.erb within layouts/application (2406.7ms)
+I, [2014-01-02T20:28:09.156802 #16179]  INFO -- : Completed 200 OK in 2441ms (Views: 2427.0ms | ActiveRecord: 5.5ms)
+I, [2014-01-02T20:28:09.159035 #16179]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.193353 #16179]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.208632 #16179]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.213948 #16179]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.231862 #16179]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.248969 #16179]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.266218 #16179]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.309844 #16179]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.334543 #16179]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.343061 #16179]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+F, [2014-01-02T20:28:09.363127 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:09.408182 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+I, [2014-01-02T20:28:09.427636 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+I, [2014-01-02T20:28:09.436848 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+I, [2014-01-02T20:28:09.437103 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (64.6ms)
+I, [2014-01-02T20:28:09.439110 #16179]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+F, [2014-01-02T20:28:09.457343 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:09.476835 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+I, [2014-01-02T20:28:09.493679 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+I, [2014-01-02T20:28:09.500295 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+I, [2014-01-02T20:28:09.500471 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.8ms)
+I, [2014-01-02T20:28:09.502144 #16179]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.506684 #16179]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.510290 #16179]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+F, [2014-01-02T20:28:09.514214 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:09.530226 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+I, [2014-01-02T20:28:09.546119 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+I, [2014-01-02T20:28:09.609277 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+I, [2014-01-02T20:28:09.609545 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (87.5ms)
+I, [2014-01-02T20:28:09.621561 #16179]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.626866 #16179]  INFO -- : Started GET "/assets/icons/where_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.631516 #16179]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.636037 #16179]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.652099 #16179]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.684807 #16179]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.693057 #16179]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.705886 #16179]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.714702 #16179]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.728233 #16179]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.742367 #16179]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.747176 #16179]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.755118 #16179]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.759936 #16179]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.764910 #16179]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.770126 #16179]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.780553 #16179]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.792690 #16179]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.804270 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.815082 #16179]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.822548 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.829958 #16179]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.837780 #16179]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.843393 #16179]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.849381 #16179]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.859368 #16179]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.867207 #16179]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.872246 #16179]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:09.877497 #16179]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:09 -0500
+I, [2014-01-02T20:28:20.479221 #16179]  INFO -- : Started PATCH "/pages/39" for 127.0.0.1 at 2014-01-02 20:28:20 -0500
+I, [2014-01-02T20:28:20.485683 #16179]  INFO -- : Processing by PagesController#update as HTML
+I, [2014-01-02T20:28:20.491356 #16179]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"w94QehmtgCZ8bA7Eu2yEVlhhwA+P7nzO9+2COc8rNRg=", "page"=>{"name"=>"kljlk", "content"=>"", "parent_id"=>"38", "icon"=>"app/assets/images/icons/bar_food.png", "sec_icon"=>"app/assets/images/icons/bar_food.png", "mappable"=>"0", "searchable"=>"1", "searchType"=>"bars", "keywords"=>"kosher,jewish", "isrootview"=>"0"}, "commit"=>"Update Page", "id"=>"39"}
+I, [2014-01-02T20:28:20.492223 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:28:20.492362 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:28:20.493128 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:28:20.493237 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:28:20.590437 #16179]  INFO -- : Redirected to http://localhost:3000/pages/39
+I, [2014-01-02T20:28:20.590737 #16179]  INFO -- : Completed 302 Found in 99ms (ActiveRecord: 85.6ms)
+I, [2014-01-02T20:28:21.231247 #16179]  INFO -- : Started GET "/pages/38" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.236696 #16179]  INFO -- : Processing by PagesController#show as HTML
+I, [2014-01-02T20:28:21.236810 #16179]  INFO -- :   Parameters: {"id"=>"38"}
+I, [2014-01-02T20:28:21.237510 #16179]  INFO -- : Setting up coords
+I, [2014-01-02T20:28:21.237659 #16179]  INFO -- : 69.124.17.8
+I, [2014-01-02T20:28:21.238311 #16179]  INFO -- : 40.5516
+I, [2014-01-02T20:28:21.238414 #16179]  INFO -- : -74.4637
+I, [2014-01-02T20:28:21.250815 #16179]  INFO -- :   Rendered pages/_submenu_pages.html.erb (1.8ms)
+I, [2014-01-02T20:28:21.257122 #16179]  INFO -- :   Rendered pages/show.html.erb within layouts/application (14.2ms)
+I, [2014-01-02T20:28:21.274043 #16179]  INFO -- : Completed 200 OK in 37ms (Views: 31.3ms | ActiveRecord: 2.5ms)
+I, [2014-01-02T20:28:21.305725 #16179]  INFO -- : Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.314612 #16179]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.323299 #16179]  INFO -- : Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.336466 #16179]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.344159 #16179]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.352460 #16179]  INFO -- : Started GET "/pages/css/jquery.jdigiclock.css" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+F, [2014-01-02T20:28:21.357385 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/css/jquery.jdigiclock.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:21.373877 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+I, [2014-01-02T20:28:21.390786 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+I, [2014-01-02T20:28:21.397542 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2014-01-02T20:28:21.397784 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.4ms)
+I, [2014-01-02T20:28:21.402107 #16179]  INFO -- : Started GET "/assets/vendor/custom.modernizr.js" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+F, [2014-01-02T20:28:21.410743 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/custom.modernizr.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:21.427102 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+I, [2014-01-02T20:28:21.441904 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+I, [2014-01-02T20:28:21.448234 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+I, [2014-01-02T20:28:21.448529 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.6ms)
+I, [2014-01-02T20:28:21.453273 #16179]  INFO -- : Started GET "/assets/icons/when_button_red_active.png" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.460324 #16179]  INFO -- : Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.466354 #16179]  INFO -- : Started GET "/pages/lib/jquery.jdigiclock.js" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+F, [2014-01-02T20:28:21.471543 #16179] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/pages/lib/jquery.jdigiclock.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/aravind/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-01-02T20:28:21.490028 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+I, [2014-01-02T20:28:21.508571 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+I, [2014-01-02T20:28:21.516632 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+I, [2014-01-02T20:28:21.516880 #16179]  INFO -- :   Rendered /Users/aravind/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.9ms)
+I, [2014-01-02T20:28:21.521136 #16179]  INFO -- : Started GET "/assets/city_24x7_logo.png" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.652970 #16179]  INFO -- : Started GET "/assets/icons/nearby_new.png" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.657515 #16179]  INFO -- : Started GET "/assets/icons/where_button_touch.png" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.665776 #16179]  INFO -- : Started GET "/assets/icons/what_shopping_icon_touch.png" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.672922 #16179]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.681033 #16179]  INFO -- : Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.689791 #16179]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.697233 #16179]  INFO -- : Started GET "/assets/icons/bar_food.png" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.710362 #16179]  INFO -- : Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.717244 #16179]  INFO -- : Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.725137 #16179]  INFO -- : Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.733043 #16179]  INFO -- : Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.741198 #16179]  INFO -- : Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.748906 #16179]  INFO -- : Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.760090 #16179]  INFO -- : Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.767729 #16179]  INFO -- : Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.775518 #16179]  INFO -- : Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.784264 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.791758 #16179]  INFO -- : Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.799912 #16179]  INFO -- : Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.806918 #16179]  INFO -- : Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.815961 #16179]  INFO -- : Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.823638 #16179]  INFO -- : Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.830601 #16179]  INFO -- : Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.837575 #16179]  INFO -- : Started GET "/assets/jquery-1.6.3.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.842091 #16179]  INFO -- : Started GET "/assets/masonry.pkgd.min.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.849553 #16179]  INFO -- : Started GET "/assets/jqIpLocation.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.862323 #16179]  INFO -- : Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.868065 #16179]  INFO -- : Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.873550 #16179]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.884273 #16179]  INFO -- : Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
+I, [2014-01-02T20:28:21.888711 #16179]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-02 20:28:21 -0500
