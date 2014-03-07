@@ -8,7 +8,33 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ 
+
  *= require_self
  *= require foundation_and_overrides
  *= require_tree .
  */
+
+#leftcolumn { width: 300px; height:200px; border: 1px solid red; float: left}
+#rightcolumn { width: 300px;height:200px; border: 1px solid red; float: right}
+
+table.feeds {
+        display: table;
+        width: 100%;
+    }
+    table.feeds thead, table.feeds tbody {
+        float: left;
+        width: 100%;
+    }
+    table.feeds tbody {
+        overflow: auto;
+        height: 150px;
+    }
+    table.feeds tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+    table.feeds th, table.feeds td {
+        width: 33%;
+    }

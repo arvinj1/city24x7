@@ -92,6 +92,28 @@ body { /* quick hack to get things looking nicer */
   }
 }
 
+#rightmenu  {
+  float: right;
+  list-style: none;
+  border-right: dashed #777 1px;
+  padding: 6px 14px;
+  padding-bottom: 30px;
+  margin-top: -10px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  margin-left: 0;
+  li {
+    margin: 8px 0;
+  }
+  ul {
+    font-size: 11px;
+    margin: 0;
+    padding-left: 16px;
+    li {
+      margin: 5px 0;
+    }
+  }
+}
 ul#board {
   margin: 0 auto;
     display:inline-block;
@@ -119,4 +141,26 @@ ul#board li {
     // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
     $adjust:false
   );
+}
+#recent_episodes { float: center; border: solid 1px #600; margin: 8px 0 16px 16px; padding: 4px; background-color: #dabbad; }
+#recent_episodes h3 { margin: 0; font-size: 1em; }
+#recent_episodes ul { list-style: none; margin-left: 8px; padding-left: 0; }
+#recent_episodes a { font-size: 0.9em; }
+
+.container
+{
+    display:block;
+	width: 100%;
+	min-height: 450px;
+	padding:2px 2px 2px 2px;
+    ;background: rgba(97,176,118,1.0);
+}
+
+.SubTile
+{
+    float: left;
+	position: relative;
+	width: 250px;
+	height: 450px;
+    
 }

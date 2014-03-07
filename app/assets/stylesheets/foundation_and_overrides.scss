@@ -63,11 +63,11 @@ $em-base: 16px !default;
 
 $default-float: left;
 
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: normal;
-// $body-font-style: normal;
+$body-bg: #1a2b9c;
+$body-font-color: #222;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-weight: normal;
+$body-font-style: normal;
 
 // Font-smoothing
 
@@ -314,11 +314,11 @@ $default-float: left;
 
 // We use these to style the fieldset border and spacing.
 
-// $fieldset-border-style: solid;
-// $fieldset-border-width: 1px;
-// $fieldset-border-color: #ddd;
-// $fieldset-padding: em-calc(20);
-// $fieldset-margin: em-calc(18 0);
+ $fieldset-border-style: solid;
+ $fieldset-border-width: 1px;
+ $fieldset-border-color: #ddd;
+ $fieldset-padding: em-calc(20);
+ $fieldset-margin: em-calc(18 0);
 
 // We use these to style the legends when you use them
 
@@ -328,13 +328,13 @@ $default-float: left;
 
 // We use these to style the prefix and postfix input elements
 
-// $input-prefix-bg: darken(#fff, 5%);
-// $input-prefix-border-color: darken(#fff, 20%);
-// $input-prefix-border-size: 1px;
-// $input-prefix-border-type: solid;
-// $input-prefix-overflow: hidden;
-// $input-prefix-font-color: #333;
-// $input-prefix-font-color-alt: #fff;
+ $input-prefix-bg: darken(#fff, 5%);
+ $input-prefix-border-color: darken(#fff, 20%);
+ $input-prefix-border-size: 1px;
+ $input-prefix-border-type: solid;
+ $input-prefix-overflow: hidden;
+ $input-prefix-font-color: #333;
+ $input-prefix-font-color-alt: #fff;
 
 // We use these to style the error states for inputs and labels
 
@@ -601,15 +601,15 @@ $default-float: left;
 
 // We use these to control the basic form styles input styles
 
-// $custom-form-border-color: #ccc;
-// $custom-form-border-size: 1px;
-// $custom-form-bg: #fff;
-// $custom-form-bg-disabled: #ddd;
-// $custom-form-input-size: 16px;
-// $custom-form-check-color: #222;
-// $custom-form-check-size: 16px;
-// $custom-form-radio-size: 8px;
-// $custom-form-checkbox-radius: 0;
+ $custom-form-border-color: #ccc;
+ $custom-form-border-size: 1px;
+ $custom-form-bg: #fff;
+ $custom-form-bg-disabled: #ddd;
+ $custom-form-input-size: 16px;
+ $custom-form-check-color: #222;
+ $custom-form-check-size: 16px;
+ $custom-form-radio-size: 8px;
+ $custom-form-checkbox-radius: 0;
 
 // We use these to style the custom select form element.
 
@@ -1179,29 +1179,29 @@ $default-float: left;
 
 // These control the background color for the table and even rows
 
-// $table-bg: #fff;
-// $table-even-row-bg: #f9f9f9;
+//$table-bg: #abcdef;
+//$table-even-row-bg: #0f0;
 
 // These control the table cell border style
 
-// $table-border-style: solid;
-// $table-border-size: 1px;
-// $table-border-color: #ddd;
+ $table-border-style: solid;
+ $table-border-size: 1px;
+ $table-border-color: #ddd;
 
 // These control the table head styles
 
-// $table-head-bg: #f5f5f5;
-// $table-head-font-size: em-calc(14);
-// $table-head-font-color: #222;
-// $table-head-font-weight: bold;
-// $table-head-padding: em-calc(8 10 10);
+//$table-head-bg: #f5f5f5;
+//$table-head-font-size: em-calc(14);
+//$table-head-font-color: #222;
+//$table-head-font-weight: bold;
+//$table-head-padding: em-calc(8 10 10);
 
 // These control the row padding and font styles
 
-// $table-row-padding: em-calc(9 10);
-// $table-row-font-size: em-calc(14);
-// $table-row-font-color: #222;
-// $table-line-height: em-calc(18);
+//$table-row-padding: em-calc(9 10);
+$table-row-font-size: em-calc(18);
+//$table-row-font-color: #222;
+$table-line-height: em-calc(14);
 
 // These are for controlling the display and margin of tables
 

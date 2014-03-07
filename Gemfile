@@ -33,7 +33,12 @@ end
 gem 'ancestry'
 gem 'geocoder'
 gem 'google_places'
+gem 'flexslider'
+
+gem 'carrierwave'
 gem 'rails_12factor', group: :production
+
+gem 'whenever', require: false
 group :production do
   gem 'unicorn'
 end
@@ -41,7 +46,11 @@ gem 'awesome_print'
 gem "pp-colour", "~> 0.1.0"
 gem "foundation-rails"
 gem 'jquery-turbolinks'
+gem 'feedzirra'
+gem 'gtfs'
+gem "simple_form"
 gem "debugger"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

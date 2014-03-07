@@ -1,4 +1,8 @@
 C247::Application.routes.draw do
+  resources :ad_items
+
+  resources :ad_banners
+
   resources :pages
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.

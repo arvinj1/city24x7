@@ -10,12 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery_ujs
 //= require jquery
 //= require jquery.turbolinks
-//= require jquery_ujs
+
 //= require foundation
 
 //= require masonry.pkgd.min
+
+//= require jquery.cycle2.min
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+//$(function(){ $(document).foundation(); });

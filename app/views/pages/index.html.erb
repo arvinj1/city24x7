@@ -4,31 +4,52 @@
   <thead>
     <tr>
       <th>Name</th>
+	  <th>id</th>
+	  <th>Root</th>
       <th>Content</th>
       <th>Ancestry</th>
 	  <th>Mappable</th>
 	  <th>Searchable</th>
 	  <th>Keywords</th>
 	  <th>Icon</th>
-	  <th>Secondary</th>
-      <th></th>
-      <th></th>
-      <th></th>
+	  <th>SecondaryIcon</th>
+	  
+      <th>IsBannerItem</th>
+	  <th>BannerImage</th>
+      <th>BannerName</th>
+	  <th>RSSable</th>
+	  
+      <th>is Transit</th>
+	  <th "colspan=3">Actions </th>
     </tr>
   </thead>
 
   <tbody>
+	<% rootpages=Page.where()%> 
     <% @pages.each do |page| %>
       <tr>
         <td><%= page.name %></td>
+		<td><%= page.id %></td>
         <td><%= page.content %></td>
+		<td><%= page.isrootview%> </td>
         <td><%= page.ancestry %></td>
 		<td><%= page.mappable%></td>
 		<td><%= page.searchable%></td>
 		<td><%= page.keywords%></td>
 		<td><%= (image_tag "icons/#{page.icon.split('/').last}", size: "52x52")%></td>
 		<td><%= (image_tag "icons/#{page.sec_icon.split('/').last}", size: "52x52") if page.sec_icon != nil%></td>
-		
+		<td><%= page.is_banner_item%></td>
+		<td>
+			<% if page.is_banner_item && page.loopImage != nil%>
+			<%= (image_tag  "loops/#{page.loopImage.split('/').last}", size: "52x52") if page.is_banner_item==TRUE%>
+			<% else %>
+			No Image
+		</td>
+			<%end%>
+		<td><%= page.ad_banner_id%>
+		<td><%= page.rssable%>
+		<td><%= page.istransit%>
+			
         <td><%= link_to 'Show', page %></td>
         <td><%= link_to 'Edit', edit_page_path(page) %></td>
         <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>

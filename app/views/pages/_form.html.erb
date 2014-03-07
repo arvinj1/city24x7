@@ -1,6 +1,7 @@
 <b> Request from <%=@rip %> </b>
 <b> <%=@page.name %> 
-	<%=@page.parent.name if @page.parent.nil? == false %> </b>
+	<%=@page.parent.name if @page.parent.nil? == false %>
+ </b>
 <%= form_for(@page) do |f| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
@@ -15,19 +16,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
+    <%= f.label :content %>
     <%= f.text_area :content, size: "60x24"  %>
   </div>
   <div class="field">
-    <%= f.label :parent_id %><br>
+    <%= f.label :parent_id %>
     <%= f.collection_select :parent_id, Page.order(:name) ,:id ,:name ,:include_blank => true %>
   </div>
   <div class="field">
-    <%= f.label :icon %><br>
+    <%= f.label :icon %>
     <%= f.select :icon, @images %>
  </div>
  <div class="field">
@@ -35,25 +36,46 @@
    <%= f.select :sec_icon, @images %>
 </div>
     <div class="field">
-      <%= f.label :mappable %><br>
+      <%= f.label :mappable %>
       <%= f.check_box :mappable %>
   	</div>
     <div class="field">
-      <%= f.label :searchable %><br>
+      <%= f.label :searchable %>
       <%= f.check_box :searchable %>
   	</div>
     <div class="field">
-      <%= f.label :searchType %><br>
+      <%= f.label :searchType %>
       <%= f.text_field :searchType%>
   	</div>
     <div class="field">
-      <%= f.label :keywords %><br>
+      <%= f.label :keywords %>
       <%= f.text_field :keywords%>
   	</div>
     <div class="field">
-      <%= f.label :isrootview %><br>
+      <%= f.label :isrootview %>
       <%= f.check_box :isrootview %>
   	</div>
+    <div class="field">
+      <%= f.label :rssable %>
+      <%= f.check_box :rssable %>
+  	</div>
+    <div class="field">
+      <%= f.label :istransit %>
+      <%= f.check_box :istransit %>
+  	</div>
+    <div class="field">
+      <%= f.label :is_banner_item %>
+      <%= f.check_box :is_banner_item %>
+  	</div>
+     <div class="field">
+       <%= f.label :loopImage %>
+       <%= f.select :loopImage, @loops ,:include_blank => true%>
+    </div>
+   
+    <div class="field">
+      <%= f.label :ad_banner_id %>
+      <%= f.collection_select :ad_banner_id, AdBanner.order(:name) ,:id ,:name ,:include_blank => "Please SElect" %>
+    </div>
 	
   <div class="actions">
     <%= f.submit %>

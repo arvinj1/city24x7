@@ -21,6 +21,7 @@ class PagesController < ApplicationController
   def new
     @page = Page.new
     @images=Dir.glob("app/assets/images/icons/*.png")
+    @loops=Dir.glob("app/assets/images/loops/*")
     @rip=remoteIP()
     @coordinates ||= Geocoder.coordinates(@rip)
    
@@ -29,6 +30,7 @@ class PagesController < ApplicationController
   # GET /pages/1/edit
   def edit
     @images=Dir.glob("app/assets/images/icons/*.png")
+    @loops=Dir.glob("app/assets/images/loops/*")
     @rip=remoteIP()
     @coordinates ||= Geocoder.coordinates(@rip)
     
@@ -97,6 +99,6 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:name, :content, :parent_id,:icon,:mappable,:searchable,:keywords,:isrootview,:searchType,:sec_icon)
+      params.require(:page).permit(:name, :content, :parent_id,:icon,:mappable,:searchable,:keywords,:isrootview,:searchType,:sec_icon,:is_banner_item,:ad_banner_id,:rssable,:istransit,:loopImage)
     end
 end

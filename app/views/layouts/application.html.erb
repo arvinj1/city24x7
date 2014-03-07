@@ -15,16 +15,16 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-
-  	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	
+  	<%= javascript_include_tag 'jquery.cycle2.min' %>
+	<script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
+	<%= stylesheet_link_tag    "application" %>
+	
+	
     <%= csrf_meta_tags %>
-	<style>
-
-	</style>
-	<link rel="stylesheet" type="text/css" href="css/jquery.jdigiclock.css" />
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-	<script type="text/javascript" src="lib/jquery.jdigiclock.js"></script>
+	
+	
 	<script type="text/javascript">
 	function callWeather() {
 		console.log("In call Weather!")
@@ -73,9 +73,8 @@
 
 	$(document).ready (ready);
 	$(document).ready(function() {
-	        $('#digiclock').jdigiclock({
-	            // Configuration goes here
-	        });
+	   // $('.flexslider').flexslider();
+			 
 	    });
 		
 	//jQuery('document').on('page:load',ready);
@@ -101,18 +100,15 @@
 			<li><div id="digiclock"></div></li>
 			 <li><span  id="weatherTemp"></span></li> 
 			 <li class="divider"></li>
-	        <li><span id="weatherIcon"></span></li>
-			
-			
+	        <li><span id="weatherIcon"></span></li>		
 	      </ul>
-
-	      
 	    </section>
 	  </nav>
     <%= yield %>
 
     
     <%= javascript_include_tag "application" %>
+	
 	
 	
 	<footer class="row">
