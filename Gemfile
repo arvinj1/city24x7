@@ -38,18 +38,18 @@ gem 'flexslider'
 gem 'carrierwave'
 gem 'rails_12factor', group: :production
 
-gem 'whenever', require: false
+gem 'whenever', require: false, group: :development
 group :production do
   gem 'unicorn'
 end
 gem 'awesome_print'
-gem "pp-colour", "~> 0.1.0"
+gem "pp-colour", "~> 0.1.0" ,group: :development
 gem "foundation-rails"
 gem 'jquery-turbolinks'
 gem 'feedzirra'
-gem 'gtfs'
+#gem 'gtfs'
 gem "simple_form"
-gem "debugger"
+gem "debugger", group: [:development, :test]
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
