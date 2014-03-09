@@ -1,0 +1,33 @@
+<h1>Listing ad_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Selected</th>
+      <th>Ad banner</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_items.each do |ad_item| %>
+      <tr>
+        <td><%= ad_item.name %></td>
+        <td><%= ad_item.image %></td>
+        <td><%= ad_item.selected %></td>
+        <td><%= ad_item.ad_banner_id %></td>
+        <td><%= link_to 'Show', ad_item %></td>
+        <td><%= link_to 'Edit', edit_ad_item_path(ad_item) %></td>
+        <td><%= link_to 'Destroy', ad_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad item', new_ad_item_path %>

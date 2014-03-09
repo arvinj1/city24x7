@@ -1,0 +1,34 @@
+<h1>Listing ad_banners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Counter</th>
+      <th>Selected</th>
+      <th>See</th>
+      <th>PageNums</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_banners.each do |ad_banner| %>
+      <tr>
+        <td><%= ad_banner.name %></td>
+        <td><%= ad_banner.counter %></td>
+        <td><%= ad_banner.selected %></td>
+        <td><%= ad_banner.see %></td>
+		 <td><%= ad_banner.pages.count %></td>
+        <td><%= link_to 'Show', ad_banner %></td>
+        <td><%= link_to 'Edit', edit_ad_banner_path(ad_banner) %></td>
+        <td><%= link_to 'Destroy', ad_banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad banner', new_ad_banner_path %>

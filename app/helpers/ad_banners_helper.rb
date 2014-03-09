@@ -1,0 +1,2 @@
+module AdBannersHelper
+end

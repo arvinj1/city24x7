@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  routeuuid: MyString
+  short_name: MyString
+  long_name: MyString
+  type: 1
+
+two:
+  routeuuid: MyString
+  short_name: MyString
+  long_name: MyString
+  type: 1

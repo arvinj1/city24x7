@@ -1,0 +1,27 @@
+<%= simple_form_for @page do |f| %>
+ <table>
+	<tr> <td>
+  <%= f.input :name %>
+  <%= f.input :content, as: :text %>
+  <%= f.input :parent_id,:collection => Page.order(:name),:label_method => :name,:value_method => :id,:label => "Parent" ,:include_blank => true %>
+  <%=f.input :icon, collection: @images, prompt: "Select The Primary icon" %>
+  <%=f.input :sec_icon, collection: @images, prompt: "Select The Secondary icon"  %>
+  </td><td>
+   <%= f.input :mappable %>
+  <%= f.input :searchable %>
+   <%= f.input :searchType%>
+   <%= f.input :keywords%>
+   <%= f.input :isrootview %>
+   <%= f.input :rssable %>
+   <div>
+    <%= f.input :istransit %> 
+	</div>
+</td></tr>
+	<tr><td colspan="2">
+  <%= f.input :is_banner_item %>
+  <%= f.input :loopImage, collection:@loops ,:include_blank => true%>
+  <%= f.input :ad_banner_id,:collection => AdBanner.order(:name) ,:value_method=>:id ,:label_method=>:name ,:include_blank => "Select Banner" %>
+  </td></tr>
+  <tr><td colspan="2">
+   <%= f.button :submit %></td></tr></table>
+<% end %>

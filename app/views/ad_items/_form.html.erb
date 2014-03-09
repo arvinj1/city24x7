@@ -1,0 +1,33 @@
+<%= form_for @ad_item, :html => {:multipart => true} do |f| %>
+  <% if @ad_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ad_item.errors.count, "error") %> prohibited this ad_item from being saved:</h2>
+
+      <ul>
+      <% @ad_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+  <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :selected %><br>
+    <%= f.check_box :selected %>
+  </div>
+  <div class="field">
+    <%= f.label :ad_banner_id %><br>
+    <%= f.collection_select :ad_banner_id, AdBanner.order(:name) ,:id ,:name  %>
+  </div>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

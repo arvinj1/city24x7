@@ -1,0 +1,73 @@
+<style>
+#progress { position: absolute; bottom: 0; height: 6px; width: 0px; background: #c00; z-index: 500; }
+</style>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ad_banner.name %>
+</p>
+
+<p>
+  <strong>Counter:</strong>
+  <%= @ad_banner.counter %>
+</p>
+
+<p>
+  <strong>Selected:</strong>
+  <%= @ad_banner.selected %>
+</p>
+
+<p>
+  <strong>See:</strong>
+  <%= @ad_banner.see %>
+</p>
+<p>
+	<ul>
+	<% @ad_banner.pages.each do |aditem| %>
+	<% filename="loops/#{aditem.loopImage.split('/').last}"%>
+		<li><%= filename %></li>
+	
+	<% end %>
+	</ul>
+</p>
+	
+<div id="showcase">
+<div id="cycle2" class="cycle-slideshow"
+	data-cycle-slides="> div"
+	data-cycle-fx="fade"
+	data-cycle-carousel-visible="5"
+	data-allow-wrap="true"
+	data-cycle-auto-height="320:240"
+>
+	<% @ad_banner.pages.each do |aditem| %>
+	<% filename="loops/#{aditem.loopImage.split('/').last}"%>
+		<div><%= link_to (image_tag filename),aditem %></div>
+	
+	<% end %>
+</div>
+</div>
+
+
+<%= link_to 'Edit', edit_ad_banner_path(@ad_banner) %> |
+<%= link_to 'Back', ad_banners_path %>
+
+<script>
+jQuery(document).ready(function() {
+	
+	
+    $("#cycle2").click(function (event) {
+        var x=event.pageX;
+        var y=event.pageY;
+        
+            alert ("Someone clicked on the slide show "+x+":"+y);
+            //$( "#dialog-form" ).dialog( "open" );
+			// var index =  $('#cycle2').( '.cycle-currSlide' );
+            //alert ("ID # "+index);
+			
+           // showDialog();
+        
+    });
+   
+});
+</script>

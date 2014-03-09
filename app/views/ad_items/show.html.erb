@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ad_item.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @ad_item.image_url.to_s  %>
+</p>
+
+<p>
+  <strong>Selected:</strong>
+  <%= @ad_item.selected %>
+</p>
+
+<p>
+  <strong>Ad banner:</strong>
+  <%= @ad_item.ad_banner_id %>
+</p>
+
+<%= link_to 'Edit', edit_ad_item_path(@ad_item) %> |
+<%= link_to 'Back', ad_items_path %>

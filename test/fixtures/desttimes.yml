@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trip_id: 1
+  arrival: MyString
+  departure: MyString
+  rail_stop_id: 1
+  sequence: 1
+  headsign: MyString
+
+two:
+  trip_id: 1
+  arrival: MyString
+  departure: MyString
+  rail_stop_id: 1
+  sequence: 1
+  headsign: MyString

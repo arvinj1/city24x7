@@ -1,0 +1,14 @@
+<div id="showcase">
+<div id="cycle2" class="cycle-slideshow"
+	data-cycle-slides="> div"
+	data-cycle-fx="fade"
+	data-cycle-carousel-visible="5"
+	data-allow-wrap="true"
+>
+	<% @ad_banner.pages.each do |aditem| %>
+	<% filename="icons/#{aditem.sec_icon.split('/').last}"%>
+		<div><%= link_to (image_tag filename),aditem %></div>
+	
+	<% end %>
+</div>
+</div>
