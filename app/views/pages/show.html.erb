@@ -157,6 +157,7 @@
 <% end %>
 <% end %>
 <% end %>
+<% if AdBanner.all.count != 0%>
 <% if @page.nil? ==false %>
 <% ab=@page.ad_banner_id %>
 <% if ab.nil? %>
@@ -185,6 +186,7 @@
 </div>
 </div>
 </center>
+<%end%>
 
 <script>
 function loadIframe(iframeName, url) {
