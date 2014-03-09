@@ -40,7 +40,7 @@ gem 'rails_12factor', group: :production
 
 gem 'whenever', require: false, group: :development
 group :production do
-  gem 'unicorn'
+  gem 'thin'
 end
 gem 'awesome_print'
 gem "pp-colour", "~> 0.1.0" ,group: :development
