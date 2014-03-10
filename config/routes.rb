@@ -1,4 +1,6 @@
 C247::Application.routes.draw do
+  resources :feeds
+
   resources :ad_items
 
   resources :ad_banners

@@ -153,14 +153,19 @@ ul#board li {
 	width: 100%;
 	min-height: 450px;
 	padding:2px 2px 2px 2px;
-    ;background: rgba(97,176,118,1.0);
+    ;background: rgba(215, 164, 55, 0.4);
 }
 
 .SubTile
 {
-    float: left;
-	position: relative;
-	width: 250px;
+    
+	float:left;
+	width: 30%;
 	height: 450px;
     
+}
+.RightTile {
+	
+	width: 70%;
+	height: 450px;
 }

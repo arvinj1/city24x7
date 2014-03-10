@@ -17,6 +17,7 @@
   	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	
+	
   	<%= javascript_include_tag 'jquery.cycle2.min' %>
 	<script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
 	<%= stylesheet_link_tag    "application" %>
@@ -74,10 +75,40 @@
 	$(document).ready (ready);
 	$(document).ready(function() {
 	   // $('.flexslider').flexslider();
-			 
+			 setInterval('updateClock()', 1000);
 	    });
 		
 	//jQuery('document').on('page:load',ready);
+	
+	function updateClock ( )
+	    {
+	    var currentTime = new Date ( );
+	    var currentHours = currentTime.getHours ( );
+	    var currentMinutes = currentTime.getMinutes ( );
+	    var currentSeconds = currentTime.getSeconds ( );
+
+	    // Pad the minutes and seconds with leading zeros, if required
+	    currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+	    currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+	    // Choose either "AM" or "PM" as appropriate
+	    var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+
+	    // Convert the hours component to 12-hour format if needed
+	    currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+
+	    // Convert an hours component of "0" to "12"
+	    currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+	    // Compose the string for display
+	    var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay + "\t";
+    
+    	var str="<color=green>"+currentTimeString+"</color>";
+	    $("#clock").html(currentTimeString);
+        
+	 }
+
+	
 	
 	</script>
 	
@@ -88,8 +119,10 @@
 	  <nav class="top-bar" data-topbar>
 	    <ul class="title-area">
 	      <li class="name">
-			<%= (image_tag "city_24x7_logo.png", size:"192x128") %>
+			<%= link_to (image_tag "city_24x7_logo.png", size:"192x128"), root_path %>
 	      </li>
+		  
+		  
 	      
 	    </ul>
 
@@ -97,7 +130,8 @@
 	      <!-- Right Nav Section -->
 		  
 	      <ul class="right">
-			<li><div id="digiclock"></div></li>
+			  <li><span id="clock"></span>
+			  </li>
 			 <li><span  id="weatherTemp"></span></li> 
 			 <li class="divider"></li>
 	        <li><span id="weatherIcon"></span></li>		

@@ -137,19 +137,35 @@
 	
 	
 <% elsif @page.rssable?%>
+<% source="" %>
 <div class="container">
 	<div class="SubTile">
-  
-	  <% source="" %>
-  	<table class="feeds" width="30%"><thead><tr><th colspan="2">NYC Feeds </th></tr></thead><tbody>
-  <% for entry in FeedEntry.all(:limit => 30, :order => "published_at desc") %>
-    <% if source != entry.source %>
-	<% source = entry.source %>
-	<% end %>
-	<tr class="feedoverview"><td class="feedsrc"> <%= source %></td><td class="feedval" data-food="<%=entry.url %>"><%= entry.name %></td></tr>
-  <% end %>
- </tbody> </table></div> 
- <div id="SubTile"><iframe src="//api.jquery.com/" width="80%" height="600" id="frameDemo"></iframe></div>
+  	<table class="feeds" width="30%">
+		<thead>
+			<tr>
+				<th colspan="2">NYC Feeds </th>
+			</tr>
+		</thead>
+		<tbody>
+  		  <% for entry in FeedEntry.all(:limit => 30, :order => "published_at desc") %>
+    	  	<% if source != entry.source %>
+				<% source = entry.source %>
+			<% end %>
+			<tr class="feedoverview">
+				<td class="feedsrc"> 
+					<%= source %>
+				</td>
+				<td class="feedval" data-food="<%=entry.summary %> data-publ=<%=entry.content%>">
+					<%= entry.name %>
+				</td>
+			</tr>
+  		  <% end %>
+ 	 	</tbody> 
+ 	</table>
+	</div> 
+ 	<div id="SubTile"><!--iframe src="//api.jquery.com/" width="80%" height="600" id="frameDemo"></iframe-->
+ 	   <iframe id="feedres" width=70% height="450" seamless></iframe>
+ 	</div>
  </div>
 
 <% else %>
@@ -189,26 +205,33 @@
 <%end%>
 
 <script>
-function loadIframe(iframeName, url) {
-    var $iframe = $('#' + iframeName);
+function loadIframe(iframeName, url,publ) {
+    /*var $iframe = $('#' + iframeName);
     if ( $iframe.length ) {
         $iframe.attr('src',url);   
         return false;
-    }
-    return true;
+    }*/
+	//$("#feedres").html("");
+	alert(publ);
+	var stri="<center><h1><i>News Feed</i> </h1>"+url+"</center>";
+	//$("#feedres").html(stri);
+    $("#feedres").attr('srcdoc',stri);
+	$("feedres").show();
+	return true;
 }
 jQuery(document).ready(function() {
 	
-	$("#frameDemo").hide();
 	
-	var tr=$('.centerframe-transit').find('tr');
+	
+	/*var tr=$('.centerframe-transit').find('tr');
 	tr.bind('click', function(event) {
 
 	    unitNo = $(this).find("td.routename").html(); 
 	    alert(unitNo);
 
 
-	});
+	});*/
+	
 	var tr2=$('.feeds').find('tr');
 	tr2.bind('click', function(event) {
 
@@ -217,8 +240,9 @@ jQuery(document).ready(function() {
 		console.log(unitNo);
 		
 		unibo=td.data("food");
+		uniglo=td.data("publ");
 		console.log(unibo);
-		loadIframe("frameDemo",unibo);
+		loadIframe("frameDemo",unibo,uniglo);
 		$("#frameDemo").show();
 	});
 });
