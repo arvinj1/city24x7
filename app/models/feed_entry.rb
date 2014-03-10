@@ -1,6 +1,6 @@
 class FeedEntry < ActiveRecord::Base
   
-  has_many 
+  
   feedTem=Struct.new :a,:x,:y,:z
   
   
