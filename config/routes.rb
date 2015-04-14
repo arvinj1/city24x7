@@ -1,4 +1,6 @@
 C247::Application.routes.draw do
+  resources :newsfeeds
+
   resources :feeds
 
   resources :ad_items
